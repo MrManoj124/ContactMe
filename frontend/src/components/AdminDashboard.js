@@ -183,6 +183,94 @@ const AdminDashboard = () => {
             </button>
           </div>
 
+           {/* Contacts Tab */}
+          {activeTab === 'contacts' && (
+            <div className="p-6">
+              <div className="flex justify-between items-center mb-6">
+                <div className="flex gap-2">
+                  {['all', 'unread', 'read', 'replied'].map((status) => (
+                    <button
+                      key={status}
+                      onClick={() => setFilter(status)}
+                      className={`px-4 py-2 rounded-lg font-medium transition-all ${
+                        filter === status
+                          ? 'bg-purple-500 text-white'
+                          : 'bg-slate-700/50 text-gray-400 hover:bg-slate-700'
+                      }`}
+                    >
+                      {status.charAt(0).toUpperCase() + status.slice(1)}
+                    </button>
+                  ))}
+                </div>
+                <button
+                  onClick={fetchData}
+                  className="p-2 bg-slate-700/50 hover:bg-slate-700 rounded-lg transition-all"
+                >
+                  <RefreshCw className="text-gray-400" size={20} />
+                </button>
+              </div>
+
+              <div className="space-y-4">
+                {contacts.length === 0 ? (
+                  <div className="text-center py-12">
+                    <Mail className="mx-auto text-gray-600 mb-4" size={48} />
+                    <p className="text-gray-400">No contacts found</p>
+                  </div>
+                ) : (
+                  contacts.map((contact) => (
+                    <div
+                      key={contact._id}
+                      className="bg-slate-700/30 rounded-lg p-6 border border-slate-700 hover:border-purple-500/50 transition-all"
+                    >
+                      <div className="flex items-start justify-between mb-4">
+                        <div className="flex-1">
+                          <div className="flex items-center gap-3 mb-2">
+                            <h3 className="text-white font-semibold text-lg">
+                              {contact.name}
+                            </h3>
+                            <span className={`px-3 py-1 rounded-full text-xs font-semibold text-white ${getStatusColor(contact.status)}`}>
+                              {contact.status}
+                            </span>
+                          </div>
+                          <p className="text-purple-400 mb-1">{contact.email}</p>
+                          <p className="text-gray-500 text-sm">{formatDate(contact.createdAt)}</p>
+                        </div>
+                        <div className="flex gap-2">
+                          {contact.status !== 'read' && (
+                            <button
+                              onClick={() => updateContactStatus(contact._id, 'read')}
+                              className="p-2 bg-yellow-500/20 hover:bg-yellow-500/30 rounded-lg transition-all"
+                              title="Mark as read"
+                            >
+                              <Eye className="text-yellow-400" size={18} />
+                            </button>
+                          )}
+                          {contact.status !== 'replied' && (
+                            <button
+                              onClick={() => updateContactStatus(contact._id, 'replied')}
+                              className="p-2 bg-green-500/20 hover:bg-green-500/30 rounded-lg transition-all"
+                              title="Mark as replied"
+                            >
+                              <Check className="text-green-400" size={18} />
+                            </button>
+                          )}
+                        </div>
+                      </div>
+                      <div className="mb-4">
+                        <p className="text-gray-400 text-sm font-semibold mb-2">Subject:</p>
+                        <p className="text-white">{contact.subject}</p>
+                      </div>
+                      <div>
+                        <p className="text-gray-400 text-sm font-semibold mb-2">Message:</p>
+                        <p className="text-gray-300 leading-relaxed">{contact.message}</p>
+                      </div>
+                    </div>
+                  ))
+                )}
+              </div>
+            </div>
+          )}
+
       
 
 }
