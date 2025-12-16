@@ -26,4 +26,18 @@ const AdminDashboard = () => {
       if (contactsData.success) {
         setContacts(contactsData.data);
       }
+
+      // Fetch analytics
+      const analyticsRes = await fetch(`${API_URL}/analytics/summary`);
+      const analyticsData = await analyticsRes.json();
+      
+      if (analyticsData.success) {
+        setAnalytics(analyticsData.data);
+      }
+    } catch (error) {
+      console.error('Error fetching data:', error);
+    } finally {
+      setLoading(false);
+    }
+  };
 }
