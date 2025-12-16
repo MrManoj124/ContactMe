@@ -157,6 +157,32 @@ const AdminDashboard = () => {
             </div>
           </div>
         </div>
+
+         {/* Tabs */}
+        <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl border border-purple-500/20 overflow-hidden">
+          <div className="flex border-b border-purple-500/20">
+            <button
+              onClick={() => setActiveTab('contacts')}
+              className={`px-6 py-4 font-semibold transition-all ${
+                activeTab === 'contacts'
+                  ? 'text-purple-400 border-b-2 border-purple-400 bg-purple-500/10'
+                  : 'text-gray-400 hover:text-white'
+              }`}
+            >
+              Contacts
+            </button>
+            <button
+              onClick={() => setActiveTab('analytics')}
+              className={`px-6 py-4 font-semibold transition-all ${
+                activeTab === 'analytics'
+                  ? 'text-purple-400 border-b-2 border-purple-400 bg-purple-500/10'
+                  : 'text-gray-400 hover:text-white'
+              }`}
+            >
+              Analytics
+            </button>
+          </div>
+
       
 
 }
