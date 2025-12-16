@@ -40,4 +40,23 @@ const AdminDashboard = () => {
       setLoading(false);
     }
   };
+
+  const updateContactStatus = async (id, status) => {
+    try {
+      const response = await fetch(`${API_URL}/contacts/${id}`, {
+        method: 'PATCH',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ status })
+      });
+
+      if (response.ok) {
+        fetchData();
+      }
+    } catch (error) {
+      console.error('Error updating contact:', error);
+    }
+  };
+  
 }
