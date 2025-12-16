@@ -271,6 +271,35 @@ const AdminDashboard = () => {
             </div>
           )}
 
-      
+          {/* Analytics Tab */}
+          {activeTab === 'analytics' && (
+            <div className="p-6">
+              <h3 className="text-2xl font-bold text-white mb-6">Analytics Summary</h3>
+              
+              <div className="grid md:grid-cols-2 gap-6">
+                <div className="bg-slate-700/30 rounded-lg p-6 border border-slate-700">
+                  <h4 className="text-lg font-semibold text-white mb-4">Total Events</h4>
+                  <p className="text-4xl font-bold text-purple-400">
+                    {analytics?.totalEvents || 0}
+                  </p>
+                </div>
 
-}
+                <div className="bg-slate-700/30 rounded-lg p-6 border border-slate-700">
+                  <h4 className="text-lg font-semibold text-white mb-4">Event Types</h4>
+                  <div className="space-y-3">
+                    {analytics?.summary?.map((item, idx) => (
+                      <div key={idx} className="flex justify-between items-center">
+                        <span className="text-gray-400">{item._id}</span>
+                        <span className="text-white font-semibold">{item.count}</span>
+                      </div>
+                    )) || <p className="text-gray-500">No data available</p>}
+                  </div>
+                </div>
+              </div>
+            </div>
+          )}
+        </div>
+      </div>
+    </div>
+  );
+};
