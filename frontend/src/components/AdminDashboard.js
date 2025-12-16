@@ -58,5 +58,38 @@ const AdminDashboard = () => {
       console.error('Error updating contact:', error);
     }
   };
-  
+
+  const formatDate = (dateString) => {
+    const date = new Date(dateString);
+    return date.toLocaleDateString('en-US', {
+      year: 'numeric',
+      month: 'short',
+      day: 'numeric',
+      hour: '2-digit',
+      minute: '2-digit'
+    });
+  };
+
+   const getStatusColor = (status) => {
+    switch (status) {
+      case 'unread':
+        return 'bg-red-500';
+      case 'read':
+        return 'bg-yellow-500';
+      case 'replied':
+        return 'bg-green-500';
+      default:
+        return 'bg-gray-500';
+    }
+  };
+
+  if (loading) {
+    return (
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
+        <div className="text-white text-xl">Loading...</div>
+      </div>
+    );
+  }
+
+
 }
