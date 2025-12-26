@@ -66,9 +66,14 @@ const testConnnection= async () => {
         console.log('  1.Check your MongoDB username and password');
         console.log('  2.Verify the database name in connection string');
         console.log('  3.Make sure the user has proper permissions');
-    }finally{
+    }
+}finally{
         await mongoose.connection.close();
         console.log('\n🔒 Connection closed');
         process.exit();
     }
-} ;
+};
+
+
+// Run the test
+testConnection();
