@@ -41,6 +41,11 @@ const testConnnection= async () => {
         console.log('Test document created successfully!');
 
         //Read the document
-        
+        const docs = await Test.find();
+        console.log('Test documents found : ', docs.length);
+
+        //Clean up test Collection
+        await mongoose.connection.db.dropCollection('tests');
+        console.log('Test Collectoin cleaned Up');
     }
 }
