@@ -27,7 +27,7 @@ const testConnnection= async () => {
 
 
         //Create  a test Document
-        console.log('\n Testing document creation...');
+        console.log('\n 🧪 Testing document creation...');
         const TestSchema = new mongoose.Schema({
             message:String,
             timeStamp:{type : Date, default : Date.now}
@@ -38,16 +38,37 @@ const testConnnection= async () => {
             message:'Test connection successful!'
         });
         await testDoc.save();
-        console.log('Test document created successfully!');
+        console.log(' ✅ Test document created successfully!');
 
         //Read the document
         const docs = await Test.find();
-        console.log('Test documents found : ', docs.length);
+        console.log(' 📖 Test documents found : ', docs.length);
 
         //Clean up test Collection
         await mongoose.connection.db.dropCollection('tests');
-        console.log('Test Collectoin cleaned Up');
+        console.log('🧹 Test Collectoin cleaned Up');
 
+        console.log('\n 🎉 All database operations successful!');
+        console.log(' ✨ Your MoongoDB connection is working perfectly!');
+    }catch(error){
+        console.log('\n ❌ MongoDB connction Error : ');
+        console.log('Error Message : ', error.message);
         
+        if(error.message.includes('ECONNREFUSED')){
+            console.log('\n 💡 Troubleshooting tips : ');
+            console.log('  1.Make sure MongoDB is installed and running');
+            console.log('  2.Check if MongoDB service is started : ');
+            console.log('    - macOS/Linux : brew services is start mongodb-community');
+            console.log('    - Windows : net start MongoDB');
+            console.log('  3.Verify connection string in .env file');
+    }else if(error.message.includes('authentication failed')){
+        console.log('\n 💡 Authentication issue : ');
+        console.log('  1.Check your MongoDB username and password');
+        console.log('  2.Verify the database name in connection string');
+        console.log('  3.Make sure the user has proper permissions');
+    }finally{
+        await mongoose.connection.close();
+        console.log('\n🔒 Connection closed');
+        process.exit();
     }
-}
+} ;
