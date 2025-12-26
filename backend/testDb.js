@@ -40,6 +40,7 @@ const testConnnection= async () => {
         await testDoc.save();
         console.log('Test document created successfully!');
 
+        //Read the document
         
     }
 }
