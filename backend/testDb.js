@@ -27,7 +27,19 @@ const testConnnection= async () => {
 
 
         //Create  a test Document
-        console.log('\');
+        console.log('\n Testing document creation...');
+        const TestSchema = new mongoose.Schema({
+            message:String,
+            timeStamp:{type : Date, default : Date.now}
+        });
 
+        const Test = mongoose.model('Test', TestSchema);
+        const testDoc = new Test({
+            message:'Test connection successful!'
+        });
+        await testDoc.save();
+        console.log('Test document created successfully!');
+
+        
     }
 }
