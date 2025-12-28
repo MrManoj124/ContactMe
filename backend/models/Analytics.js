@@ -20,3 +20,7 @@ const analyticsSchema = new mongoose.Schema({
     },
 });
 
+analyticsSchema.index({eventType : 1});
+analyticsSchema.index({timestamp : -1});
+
+module.exports = mongoose.model('Analytics', analyticsSchema);
