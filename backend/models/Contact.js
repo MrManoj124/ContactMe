@@ -38,5 +38,11 @@ const contactSchema = new mongoose.Schema({
         userAgent:String
     }
 },{
-    
-})
+    timestamps:true
+});
+
+//Indexes for performance
+contactSchema.index({createdAt:-1});
+contactSchema.index({email:1});
+contactSchema.index({status:1});
+
