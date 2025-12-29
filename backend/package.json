@@ -7,9 +7,9 @@
     "dev": "nodemon server.js",
     "test": "node testDb.js"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "keywords": ["POrtfolio", "Express", "mongodb", "nodejs"],
+  "author": "Mr_Manoj",
+  "license": "MIT",
   "description": "",
   "dependencies": {
     "cors": "^2.8.5",
