@@ -42,3 +42,38 @@ router.post('/',rateLimit(3, 60000), async(req,res) => {
         });
     }
 });
+
+
+// Get all contacts (Admin)
+router.get('/', async (req, res) => {
+  try {
+    const { status, page = 1, limit = 20 } = req.query;
+    
+    const query = status ? { status } : {};
+    const skip = (page - 1) * limit;
+
+    const contacts = await Contact.find(query)
+      .sort({ createdAt: -1 })
+      .skip(skip)
+      .limit(parseInt(limit));
+
+    const total = await Contact.countDocuments(query);
+
+    res.json({
+      success: true,
+      data: contacts,
+      pagination: {
+        page: parseInt(page),
+        limit: parseInt(limit),
+        total,
+        pages: Math.ceil(total / limit)
+      }
+    });
+  } catch (error) {
+    console.error('Get contacts error:', error);
+    res.status(500).json({
+      success: false,
+      message: 'Failed to fetch contacts'
+    });
+  }
+});
