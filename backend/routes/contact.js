@@ -77,3 +77,35 @@ router.get('/', async (req, res) => {
     });
   }
 });
+
+
+// Update contact status
+router.patch('/:id', async (req, res) => {
+  try {
+    const { id } = req.params;
+    const { status } = req.body;
+
+    const contact = await Contact.findByIdAndUpdate(
+      id,
+      { status },
+      { new: true }
+    );
+
+    if (!contact) {
+      return res.status(404).json({
+        success: false,
+        message: 'Contact not found'
+      });
+    }
+
+    res.json({
+      success: true,
+      data: contact
+    });
+  } catch (error) {
+    res.status(500).json({
+      success: false,
+      message: 'Failed to update contact'
+    });
+  }
+});
