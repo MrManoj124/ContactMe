@@ -32,3 +32,6 @@ const rateLimit = (maxRequests = 5, windowMs = 60000) => {
 
     };
 };
+
+
+module.exports = rateLimit;
