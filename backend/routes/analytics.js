@@ -28,3 +28,36 @@ router.post('/',async (req,res) => {
     }
 });
 
+//Gewt analytics summary
+router.get('/summary',async (req,res) => {
+    try{
+        const summary = await Analytics.aggregate([
+            {
+                $group : {
+                    _id: '$eventType',
+                    count : {$sum :1}
+                }
+            }
+        ]);
+
+
+        const totalEvents = await Analytics.countDocuments();
+        const totalContacts = await Contact.countDocuments();
+
+        res.json({
+            success : true,
+            data : {
+                summary,
+                totalEvents,
+                totalContacts
+            }
+        });
+    }
+    catch(error){
+        res.status(500).json({
+            success:false,
+            message : 'Failed to fetch analytics'
+        });
+    }
+});
+
