@@ -31,3 +31,22 @@ router.post('/view', async (req,res) => {
         });
     }
 })
+
+// Get project statistics
+router.get('/stats', async (req, res) => {
+  try {
+    const projects = await ProjectView.find()
+      .sort({ viewCount: -1 })
+      .limit(10);
+
+    res.json({
+      success: true,
+      data: projects
+    });
+  } catch (error) {
+    res.status(500).json({
+      success: false,
+      message: 'Failed to fetch stats'
+    });
+  }
+});
