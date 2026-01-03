@@ -15,3 +15,18 @@ export const submitContact = async (formData) => {
 
     return response.json();
 };
+
+export const trackAnalytics = async (eventType, eventData = {}) => {
+    try{
+        await fetch(`${API_URL}/analytics`,{
+            method : 'POST',
+            headers :{
+                'Content-Type' : 'application/json',
+            },
+            body : JSON.stringify({eventType, eventData})
+        });
+    }catch(error){
+        console.error('Analytics error:',error);
+    }
+};
+
