@@ -30,3 +30,17 @@ export const trackAnalytics = async (eventType, eventData = {}) => {
     }
 };
 
+export const trackProjectView = async (projectId, projectTitle) => {
+    try{
+        await fetch (`${API_URL}/projects/view`,{
+            method : 'POST',
+            headers : {
+                'Content-Type' : 'application/json',
+            },
+            body:JSON.stringify({projectId, projectTitle})
+        });
+    }
+    catch(error){
+        console.error('Project View Tracking error : ', error);
+    }
+};
