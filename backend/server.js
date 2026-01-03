@@ -37,3 +37,30 @@ app.use('/api/contact', contactRoutes);
 app.use('/api/analytics', analyticsRoutes);
 app.use('/api/projects', projectRoutes);
 
+// 404 handler
+app.use((req, res) => {
+  res.status(404).json({
+    success: false,
+    message: 'Route not found'
+  });
+});
+
+
+// Error handler
+app.use(errorHandler);
+
+// Start server
+const PORT = process.env.PORT || 5000;
+
+const startServer = async () => {
+  await connectDB();
+  
+  app.listen(PORT, () => {
+    console.log(`🚀 Server running on port ${PORT}`);
+    console.log(`📍 API available at http://localhost:${PORT}/api`);
+  });
+};
+
+startServer();
+
+//module.exports = app;
