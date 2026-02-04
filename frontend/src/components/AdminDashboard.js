@@ -18,7 +18,7 @@ const AdminDashboard = () => {
 
   const fetchData = async () => {
     setLoading(true);
-    
+
     try {
         // Fetch contacts
       const statusParam = filter !== 'all' ? `?status=${filter}` : '';
@@ -61,6 +61,7 @@ const AdminDashboard = () => {
     }
   };
 
+  
   const formatDate = (dateString) => {
     const date = new Date(dateString);
     return date.toLocaleDateString('en-US', {
