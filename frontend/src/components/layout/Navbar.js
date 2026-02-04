@@ -50,6 +50,7 @@ const Navbar = () => {
         </div>
       </div>
 
+
        {/* Mobile Menu */}
       {isMenuOpen && (
         <div className="md:hidden bg-slate-900/95 backdrop-blur-xl border-t border-purple-500/20">
