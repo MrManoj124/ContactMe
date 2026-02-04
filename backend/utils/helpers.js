@@ -3,5 +3,4 @@ const getRequestMetadata = (req) => ({
     userAgent : req.headers['user-agent']
 });
 
-
 module.exports = {getRequestMetadata};
