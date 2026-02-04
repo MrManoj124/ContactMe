@@ -14,10 +14,11 @@ const AdminDashboard = () => {
   useEffect(() => {
     fetchData();
   }, [filter]);
-  
+
 
   const fetchData = async () => {
     setLoading(true);
+    
     try {
         // Fetch contacts
       const statusParam = filter !== 'all' ? `?status=${filter}` : '';
