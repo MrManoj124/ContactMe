@@ -14,6 +14,7 @@ const rateLimit = (maxRequests = 5, windowMs = 60000) => {
         }
     const record = rateLimitStore.get(identifier);
 
+    
     if(now > record.resetTime){
         record.count = 1;
         record.resetTime = now + windowMs;
