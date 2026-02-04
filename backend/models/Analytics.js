@@ -1,6 +1,7 @@
 const mongoose=require('mongoose');
 const { applyTimestamps } = require('./Contact');
 
+
 const analyticsSchema = new mongoose.Schema({
     eventType:{
         type:String,
