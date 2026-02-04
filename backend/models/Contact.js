@@ -41,6 +41,7 @@ const contactSchema = new mongoose.Schema({
     timestamps:true
 });
 
+
 //Indexes for performance
 contactSchema.index({createdAt:-1});
 contactSchema.index({email:1});
