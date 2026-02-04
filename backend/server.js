@@ -45,7 +45,6 @@ app.use((req, res) => {
   });
 });
 
-
 // Error handler
 app.use(errorHandler);
 
