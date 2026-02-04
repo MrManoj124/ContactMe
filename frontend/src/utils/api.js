@@ -31,6 +31,7 @@ export const trackAnalytics = async (eventType, eventData = {}) => {
     }
 };
 
+
 export const trackProjectView = async (projectId, projectTitle) => {
     try{
         await fetch (`${API_URL}/projects/view`,{
