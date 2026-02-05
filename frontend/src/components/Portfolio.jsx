@@ -275,3 +275,24 @@ try {
                   <Download size={20} /> Download CV
                 </a>
               </div>
+
+
+               {/* Social Links */}
+              <div className="pt-8">
+                <p className="text-gray-400 mb-4 font-semibold">CONNECT WITH ME</p>
+                <div className="flex gap-4">
+                  {socialLinks.map((social, idx) => (
+                    <a
+                      key={idx}
+                      href={social.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="w-12 h-12 rounded-lg bg-slate-800/50 backdrop-blur-sm border border-purple-500/20 flex items-center justify-center text-gray-400 hover:text-purple-400 hover:border-purple-500 transition-all hover:scale-110 hover:shadow-lg hover:shadow-purple-500/30"
+                      title={social.label}
+                    >
+                      <social.icon size={20} />
+                    </a>
+                  ))}
+                </div>
+              </div>
+            </div>
