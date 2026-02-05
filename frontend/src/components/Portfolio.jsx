@@ -83,3 +83,31 @@ const DeveloperPortfolio = () => {
       image: "gradient-4"
     }
   ]; 
+
+  // Services
+  const services = [
+    {
+      icon: Code,
+      title: "Frontend Development",
+      description: "Building responsive, performant web applications using React, Next.js, and modern CSS frameworks.",
+      color: "from-blue-500 to-cyan-500"
+    },
+    {
+      icon: Server,
+      title: "Backend Development",
+      description: "Developing robust APIs and server-side applications with Node.js, Express, and database integration.",
+      color: "from-green-500 to-emerald-500"
+    },
+    {
+      icon: Database,
+      title: "Database Design",
+      description: "Architecting scalable database solutions with MongoDB, PostgreSQL, and efficient data modeling.",
+      color: "from-purple-500 to-pink-500"
+    },
+    {
+      icon: Brain,
+      title: "AI Integration",
+      description: "Implementing machine learning models and AI-powered features to enhance application capabilities.",
+      color: "from-orange-500 to-red-500"
+    }
+  ];
