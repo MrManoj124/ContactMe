@@ -157,3 +157,10 @@ try {
     setActiveSection(section);
     setIsMenuOpen(false);
   };
+
+ const gradients = {
+    'gradient-1': 'from-purple-400 via-pink-500 to-red-500',
+    'gradient-2': 'from-green-400 via-blue-500 to-purple-600',
+    'gradient-3': 'from-yellow-400 via-red-500 to-pink-500',
+    'gradient-4': 'from-blue-400 via-purple-500 to-pink-500'
+  };
