@@ -259,3 +259,19 @@ try {
                   {profileData.description}
                 </p>
               </div>
+
+              {/* CTA Buttons */}
+              <div className="flex flex-wrap gap-4">
+                <button 
+                  onClick={() => scrollToSection('projects')}
+                  className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-8 py-3 rounded-lg font-semibold hover:shadow-lg hover:shadow-purple-500/50 transition-all hover:scale-105 flex items-center gap-2"
+                >
+                  View Projects <ArrowRight size={20} />
+                </button>
+                <a
+                  href={profileData.resumeUrl}
+                  className="border-2 border-purple-500 text-purple-400 px-8 py-3 rounded-lg font-semibold hover:bg-purple-500/10 transition-all flex items-center gap-2"
+                >
+                  <Download size={20} /> Download CV
+                </a>
+              </div>
