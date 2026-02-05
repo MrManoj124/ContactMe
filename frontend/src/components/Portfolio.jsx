@@ -183,3 +183,22 @@ try {
               </div>
               <span className="ml-3 text-xl font-bold text-white">DevPortfolio</span>
             </div>
+
+            {/* Desktop Menu */}
+            <div className="hidden md:flex items-center space-x-8">
+              {['Home', 'About', 'Skills', 'Projects', 'Services', 'Contact'].map((item) => (
+                <button
+                  key={item}
+                  onClick={() => scrollToSection(item.toLowerCase())}
+                  className={`text-gray-300 hover:text-purple-400 transition-colors font-medium relative group ${
+                    activeSection === item.toLowerCase() ? 'text-purple-400' : ''
+                  }`}
+                >
+                  {item}
+                  <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-purple-500 to-pink-500 group-hover:w-full transition-all"></span>
+                </button>
+              ))}
+              <button className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-6 py-2 rounded-lg hover:shadow-lg hover:shadow-purple-500/50 transition-all hover:scale-105">
+                Hire Me
+              </button>
+            </div>
