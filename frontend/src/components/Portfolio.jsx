@@ -111,3 +111,12 @@ const DeveloperPortfolio = () => {
       color: "from-orange-500 to-red-500"
     }
   ];
+
+// Social Links
+  const socialLinks = [
+    { icon: Github, url: "https://github.com/yourusername", label: "GitHub" },
+    { icon: Linkedin, url: "https://linkedin.com/in/yourusername", label: "LinkedIn" },
+    { icon: Twitter, url: "https://twitter.com/yourusername", label: "Twitter" },
+    { icon: Facebook, url: "https://facebook.com/yourusername", label: "Facebook" },
+    { icon: Instagram, url: "https://instagram.com/yourusername", label: "Instagram" }
+  ];
