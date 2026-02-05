@@ -673,3 +673,5 @@ try {
     </div>
   );
 };
+
+export default DeveloperPortfolio
