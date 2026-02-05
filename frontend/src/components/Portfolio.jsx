@@ -371,4 +371,37 @@ try {
           </div>
         </div>
       </section>
-      
+
+       {/* Skills Section */}
+      <section id="skills" className="relative py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
+              Technical <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600">Skills</span>
+            </h2>
+            <div className="w-24 h-1 bg-gradient-to-r from-purple-500 to-pink-500 mx-auto"></div>
+          </div>
+
+          <div className="space-y-12">
+            {/* Frontend */}
+            <div>
+              <h3 className="text-2xl font-bold text-white mb-6 flex items-center gap-3">
+                <Palette className="text-purple-400" /> Frontend Development
+              </h3>
+              <div className="grid md:grid-cols-2 gap-6">
+                {techStack.frontend.map((skill, idx) => (
+                  <div key={idx} className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-purple-500/20 hover:border-purple-500/50 transition-all">
+                    <div className="flex justify-between items-center mb-3">
+                      <span className="text-white font-semibold text-lg">{skill.name}</span>
+                      <span className="text-purple-400 font-bold">{skill.level}%</span>
+                    </div>
+                    <div className="w-full bg-slate-700 rounded-full h-3 overflow-hidden">
+                      <div
+                        className={`h-full bg-gradient-to-r ${skill.color} rounded-full transition-all duration-1000 shadow-lg`}
+                        style={{ width: `${skill.level}%` }}
+                      ></div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
