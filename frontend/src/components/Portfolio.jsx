@@ -15,13 +15,22 @@ const DeveloperPortfolio = () => {
 
 // Profile data
   const profileData = {
-    name: "Your Name",
+    name: "S.Manoj",
     title: "Full Stack Developer",
     futureTitle: "AI Engineer | Data Engineer",
     welcomeText: "Welcome to My Digital Space",
     description: "Passionate Full Stack Developer specializing in building exceptional digital experiences. Currently mastering the MERN stack while exploring AI/ML technologies. I transform ideas into elegant, scalable solutions that make a difference.",
-    email: "your.email@example.com",
-    phone: "+94 XXX XXX XXX",
+    email: "manojmanorooban@gmail.com",
+    phone: "+94 760543464",
     location: "Colombo, Western Province, LK",
     resumeUrl: "#"
   };
+
+  // Tech Stack
+  const techStack = {
+    frontend: [
+      { name: "React.js", level: 90, color: "from-blue-400 to-blue-600" },
+      { name: "Next.js", level: 85, color: "from-gray-700 to-black" },
+      { name: "Tailwind CSS", level: 95, color: "from-cyan-400 to-blue-500" },
+      { name: "TypeScript", level: 80, color: "from-blue-500 to-blue-700" }
+    ],
