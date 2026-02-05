@@ -6,4 +6,9 @@ const DeveloperPortfolio = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [activeSection, setActiveSection] = useState('home');
   const [formData, setFormData] = useState({
-    
+    name: '',
+    email: '',
+    subject: '',
+    message: ''
+  });
+  const [isSubmitting, setIsSubmitting] = useState(false);
