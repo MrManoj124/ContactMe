@@ -120,3 +120,9 @@ const DeveloperPortfolio = () => {
     { icon: Facebook, url: "https://facebook.com/yourusername", label: "Facebook" },
     { icon: Instagram, url: "https://instagram.com/yourusername", label: "Instagram" }
   ];
+
+const handleSubmit = async () => {
+    if (!formData.name || !formData.email || !formData.subject || !formData.message) {
+      alert('Please fill in all fields');
+      return;
+    }
