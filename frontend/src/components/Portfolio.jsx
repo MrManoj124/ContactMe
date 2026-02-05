@@ -454,3 +454,69 @@ try {
           </div>
         </div>
       </section>
+
+      {/* Projects Section */}
+      <section id="projects" className="relative py-20 px-4 sm:px-6 lg:px-8 bg-slate-900/50">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
+              Featured <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600">Projects</span>
+            </h2>
+            <div className="w-24 h-1 bg-gradient-to-r from-purple-500 to-pink-500 mx-auto mb-4"></div>
+            <p className="text-gray-400 text-lg max-w-2xl mx-auto">
+              Explore some of my recent work showcasing full-stack development, API integration, and modern web technologies.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-8">
+            {projects.map((project, idx) => (
+              <div key={idx} className="bg-slate-800/50 backdrop-blur-sm rounded-2xl overflow-hidden border border-purple-500/20 hover:border-purple-500/50 transition-all hover:scale-105 group">
+                <div className={`h-48 bg-gradient-to-br ${gradients[project.image]} flex items-center justify-center relative overflow-hidden`}>
+                  <Code size={80} className="text-white/20 group-hover:scale-110 transition-transform" />
+                  <div className="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-all"></div>
+                </div>
+                <div className="p-6 space-y-4">
+                  <h3 className="text-2xl font-bold text-white group-hover:text-purple-400 transition-colors">
+                    {project.title}
+                  </h3>
+                  <p className="text-gray-400 leading-relaxed">
+                    {project.description}
+                  </p>
+                  <div className="flex flex-wrap gap-2">
+                    {project.tech.map((tech, i) => (
+                      <span key={i} className="px-3 py-1 bg-purple-500/20 text-purple-300 rounded-full text-sm border border-purple-500/30">
+                        {tech}
+                      </span>
+                    ))}
+                  </div>
+                  <div className="flex gap-4 pt-4">
+                    <a
+                      href={project.github}
+                      className="flex items-center gap-2 text-gray-400 hover:text-white transition-colors"
+                    >
+                      <Github size={20} /> Code
+                    </a>
+                    <a
+                      href={project.live}
+                      className="flex items-center gap-2 text-gray-400 hover:text-purple-400 transition-colors"
+                    >
+                      <ExternalLink size={20} /> Live Demo
+                    </a>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          <div className="text-center mt-12">
+            <a
+              href="https://github.com/yourusername"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-500 to-pink-500 text-white px-8 py-3 rounded-lg font-semibold hover:shadow-lg hover:shadow-purple-500/50 transition-all hover:scale-105"
+            >
+              <Github size={20} /> View All Projects on GitHub
+            </a>
+          </div>
+        </div>
+      </section>
