@@ -296,3 +296,28 @@ try {
                 </div>
               </div>
             </div>
+
+
+            {/* Profile Image/Visual */}
+            <div className="relative z-10 hidden lg:block">
+              <div className="relative">
+                <div className="absolute inset-0 bg-gradient-to-r from-purple-500 to-pink-500 rounded-3xl blur-3xl opacity-30 animate-pulse"></div>
+                <div className="relative bg-gradient-to-br from-slate-800 to-slate-900 rounded-3xl p-8 border border-purple-500/20">
+                  <div className="space-y-4">
+                    <div className="h-64 bg-gradient-to-br from-purple-500/20 to-pink-500/20 rounded-2xl flex items-center justify-center">
+                      <Code size={120} className="text-purple-400" />
+                    </div>
+                    <div className="grid grid-cols-3 gap-4">
+                      {['React', 'Node.js', 'MongoDB'].map((tech, idx) => (
+                        <div key={idx} className="bg-slate-800/50 rounded-lg p-3 text-center border border-purple-500/10">
+                          <p className="text-purple-400 font-semibold text-sm">{tech}</p>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
