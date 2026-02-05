@@ -126,3 +126,34 @@ const handleSubmit = async () => {
       alert('Please fill in all fields');
       return;
     }
+
+setIsSubmitting(true);
+
+try {
+      // Replace with your actual API endpoint
+      const response = await fetch('http://localhost:5000/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData)
+      });
+
+      if (response.ok) {
+        alert('Thank you! Your message has been sent successfully.');
+        setFormData({ name: '', email: '', subject: '', message: '' });
+      } else {
+        throw new Error('Failed to send message');
+      }
+    } catch (error) {
+      console.error('Error:', error);
+      alert('Failed to send message. Please try again or contact me directly via email.');
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
+ const scrollToSection = (section) => {
+    setActiveSection(section);
+    setIsMenuOpen(false);
+  };
