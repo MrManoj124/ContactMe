@@ -34,3 +34,52 @@ const DeveloperPortfolio = () => {
       { name: "Tailwind CSS", level: 95, color: "from-cyan-400 to-blue-500" },
       { name: "TypeScript", level: 80, color: "from-blue-500 to-blue-700" }
     ],
+    backend: [
+      { name: "Node.js", level: 88, color: "from-green-400 to-green-600" },
+      { name: "Express.js", level: 90, color: "from-gray-600 to-gray-800" },
+      { name: "MongoDB", level: 85, color: "from-green-500 to-green-700" },
+      { name: "PostgreSQL", level: 82, color: "from-blue-600 to-indigo-600" }
+    ],
+    backend: [
+      { name: "Node.js", level: 88, color: "from-green-400 to-green-600" },
+      { name: "Express.js", level: 90, color: "from-gray-600 to-gray-800" },
+      { name: "MongoDB", level: 85, color: "from-green-500 to-green-700" },
+      { name: "PostgreSQL", level: 82, color: "from-blue-600 to-indigo-600" }
+    ],
+
+
+   // Projects
+  const projects = [
+    {
+      title: "E-Commerce Platform",
+      description: "Full-stack MERN e-commerce application with payment integration, admin dashboard, and real-time inventory management.",
+      tech: ["React", "Node.js", "MongoDB", "Stripe"],
+      github: "#",
+      live: "#",
+      image: "gradient-1"
+    },
+    {
+      title: "AI Task Manager",
+      description: "Smart task management system with AI-powered priority suggestions and productivity analytics.",
+      tech: ["Next.js", "Python", "TensorFlow", "PostgreSQL"],
+      github: "#",
+      live: "#",
+      image: "gradient-2"
+    },
+    {
+      title: "Real-Time Chat App",
+      description: "WebSocket-based chat application with rooms, file sharing, and end-to-end encryption.",
+      tech: ["React", "Socket.io", "Express", "Redis"],
+      github: "#",
+      live: "#",
+      image: "gradient-3"
+    },
+    {
+      title: "Data Visualization Dashboard",
+      description: "Interactive analytics dashboard for business intelligence with real-time data processing.",
+      tech: ["React", "D3.js", "Node.js", "MongoDB"],
+      github: "#",
+      live: "#",
+      image: "gradient-4"
+    }
+  ]; 
