@@ -548,3 +548,101 @@ try {
           </div>
         </div>
       </section>
+
+       {/* Contact Section */}
+      <section id="contact" className="relative py-20 px-4 sm:px-6 lg:px-8 bg-slate-900/50">
+        <div className="max-w-4xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
+              Get In <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600">Touch</span>
+            </h2>
+            <div className="w-24 h-1 bg-gradient-to-r from-purple-500 to-pink-500 mx-auto mb-4"></div>
+            <p className="text-gray-400 text-lg">
+              Have a project in mind? Let's work together to bring your ideas to life!
+            </p>
+          </div>
+
+          <div className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border border-purple-500/20">
+            <div className="space-y-6">
+              <div className="grid md:grid-cols-2 gap-6">
+                <div>
+                  <label className="block text-purple-400 font-semibold mb-2">Your Name</label>
+                  <input
+                    type="text"
+                    value={formData.name}
+                    onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+                    className="w-full px-4 py-3 rounded-lg bg-slate-900/50 border border-purple-500/30 text-white focus:border-purple-500 focus:outline-none transition-all"
+                    placeholder="John Doe"
+                  />
+                </div>
+                <div>
+                  <label className="block text-purple-400 font-semibold mb-2">Your Email</label>
+                  <input
+                    type="email"
+                    value={formData.email}
+                    onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                    className="w-full px-4 py-3 rounded-lg bg-slate-900/50 border border-purple-500/30 text-white focus:border-purple-500 focus:outline-none transition-all"
+                    placeholder="john@example.com"
+                  />
+                </div>
+              </div>
+              <div>
+                <label className="block text-purple-400 font-semibold mb-2">Subject</label>
+                <input
+                  type="text"
+                  value={formData.subject}
+                  onChange={(e) => setFormData({ ...formData, subject: e.target.value })}
+                  className="w-full px-4 py-3 rounded-lg bg-slate-900/50 border border-purple-500/30 text-white focus:border-purple-500 focus:outline-none transition-all"
+                  placeholder="Project Inquiry"
+                />
+              </div>
+              <div>
+                <label className="block text-purple-400 font-semibold mb-2">Message</label>
+                <textarea
+                  value={formData.message}
+                  onChange={(e) => setFormData({ ...formData, message: e.target.value })}
+                  rows="6"
+                  className="w-full px-4 py-3 rounded-lg bg-slate-900/50 border border-purple-500/30 text-white focus:border-purple-500 focus:outline-none transition-all resize-none"
+                  placeholder="Tell me about your project..."
+                ></textarea>
+              </div>
+              <button
+                onClick={handleSubmit}
+                disabled={isSubmitting}
+                className="w-full bg-gradient-to-r from-purple-500 to-pink-500 text-white py-4 rounded-lg font-semibold hover:shadow-lg hover:shadow-purple-500/50 transition-all hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
+              >
+                {isSubmitting ? (
+                  <>
+                    <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin"></div>
+                    Sending...
+                  </>
+                ) : (
+                  <>
+                    <Mail size={20} /> Send Message
+                  </>
+                )}
+              </button>
+            </div>
+
+            <div className="mt-8 pt-8 border-t border-purple-500/20">
+              <div className="grid md:grid-cols-3 gap-6 text-center">
+                <div>
+                  <Mail className="w-8 h-8 text-purple-400 mx-auto mb-2" />
+                  <p className="text-gray-400 text-sm">Email</p>
+                  <p className="text-white font-semibold">{profileData.email}</p>
+                </div>
+                <div>
+                  <Github className="w-8 h-8 text-purple-400 mx-auto mb-2" />
+                  <p className="text-gray-400 text-sm">GitHub</p>
+                  <a href="https://github.com/yourusername" className="text-white font-semibold hover:text-purple-400">@yourusername</a>
+                </div>
+                <div>
+                  <Linkedin className="w-8 h-8 text-purple-400 mx-auto mb-2" />
+                  <p className="text-gray-400 text-sm">LinkedIn</p>
+                  <a href="https://linkedin.com/in/yourusername" className="text-white font-semibold hover:text-purple-400">Connect</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
