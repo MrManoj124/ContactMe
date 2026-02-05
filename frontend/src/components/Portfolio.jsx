@@ -520,3 +520,31 @@ try {
           </div>
         </div>
       </section>
+
+      {/* Services Section */}
+      <section id="services" className="relative py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
+              What I <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600">Offer</span>
+            </h2>
+            <div className="w-24 h-1 bg-gradient-to-r from-purple-500 to-pink-500 mx-auto"></div>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {services.map((service, idx) => (
+              <div key={idx} className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border border-purple-500/20 hover:border-purple-500/50 transition-all hover:scale-105 group">
+                <div className={`w-16 h-16 bg-gradient-to-r ${service.color} rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform shadow-lg`}>
+                  <service.icon className="text-white" size={32} />
+                </div>
+                <h3 className="text-xl font-bold text-white mb-4 group-hover:text-purple-400 transition-colors">
+                  {service.title}
+                </h3>
+                <p className="text-gray-400 leading-relaxed">
+                  {service.description}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
