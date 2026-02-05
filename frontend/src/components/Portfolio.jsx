@@ -428,3 +428,29 @@ try {
                 ))}
               </div>
             </div>
+
+             {/* Tools & Technologies */}
+            <div>
+              <h3 className="text-2xl font-bold text-white mb-6 flex items-center gap-3">
+                <Cpu className="text-orange-400" /> Tools & Technologies
+              </h3>
+              <div className="grid md:grid-cols-2 gap-6">
+                {techStack.tools.map((skill, idx) => (
+                  <div key={idx} className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-orange-500/20 hover:border-orange-500/50 transition-all">
+                    <div className="flex justify-between items-center mb-3">
+                      <span className="text-white font-semibold text-lg">{skill.name}</span>
+                      <span className="text-orange-400 font-bold">{skill.level}%</span>
+                    </div>
+                    <div className="w-full bg-slate-700 rounded-full h-3 overflow-hidden">
+                      <div
+                        className={`h-full bg-gradient-to-r ${skill.color} rounded-full transition-all duration-1000 shadow-lg`}
+                        style={{ width: `${skill.level}%` }}
+                      ></div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
