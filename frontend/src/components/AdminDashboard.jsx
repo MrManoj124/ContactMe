@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import react,{useState, useEffect} from 'react'
+import React, {useState, useEffect} from 'react'
 import {Mail, Eye, Check, Trash2, RefreshCw} from 'lucide-react';
 
 const AdminDashboard = () => {
