@@ -213,3 +213,21 @@ try {
             </button>
           </div>
         </div>
+
+         {/* Mobile Menu */}
+        {isMenuOpen && (
+          <div className="md:hidden bg-slate-900/95 backdrop-blur-xl border-t border-purple-500/20">
+            <div className="px-4 py-3 space-y-3">
+              {['Home', 'About', 'Skills', 'Projects', 'Services', 'Contact'].map((item) => (
+                <button
+                  key={item}
+                  onClick={() => scrollToSection(item.toLowerCase())}
+                  className="block w-full text-left text-gray-300 hover:text-purple-400 py-2"
+                >
+                  {item}
+                </button>
+              ))}
+            </div>
+          </div>
+        )}
+      </nav>
