@@ -231,3 +231,31 @@ try {
           </div>
         )}
       </nav>
+
+
+       {/* Hero Section */}
+      <section id="home" className="relative pt-32 pb-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            {/* Content */}
+            <div className="space-y-8 z-10">
+              <div className="space-y-4">
+                <p className="text-purple-400 font-semibold text-lg tracking-wide animate-fade-in">
+                  {profileData.welcomeText}
+                </p>
+                <h1 className="text-5xl md:text-7xl font-bold text-white leading-tight">
+                  Hi, I'm{' '}
+                  <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600">
+                    {profileData.name}
+                  </span>
+                </h1>
+                <h2 className="text-2xl md:text-3xl text-gray-300 font-semibold">
+                  {profileData.title}
+                </h2>
+                <p className="text-lg text-purple-300 font-medium">
+                  Future: {profileData.futureTitle}
+                </p>
+                <p className="text-gray-400 text-lg leading-relaxed max-w-2xl">
+                  {profileData.description}
+                </p>
+              </div>
