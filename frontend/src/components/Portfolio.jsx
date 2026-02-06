@@ -510,7 +510,7 @@ const DeveloperPortfolio = () => {
 
           <div className="text-center mt-12">
             <a
-              href="https://github.com/yourusername"
+              href="https://github.com/MrManoj124"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-500 to-pink-500 text-white px-8 py-3 rounded-lg font-semibold hover:shadow-lg hover:shadow-purple-500/50 transition-all hover:scale-105"
