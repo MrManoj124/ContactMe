@@ -191,7 +191,7 @@ const DeveloperPortfolio = () => {
                 <button
                   key={item}
                   onClick={() => scrollToSection(item.toLowerCase())}
-                  className={`text - gray - 300 hover: text - purple - 400 transition - colors font - medium relative group ${activeSection === item.toLowerCase() ? 'text-purple-400' : ''
+                  className={`text - white - 300 hover: text - purple - 400 transition - colors font - medium relative group ${activeSection === item.toLowerCase() ? 'text-purple-400' : ''
                     } `}
                 >
                   {item}
