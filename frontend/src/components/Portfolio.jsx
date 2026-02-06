@@ -115,7 +115,7 @@ const DeveloperPortfolio = () => {
 
   // Social Links
   const socialLinks = [
-    { icon: Github, url: "https://github.com/yourusername", label: "GitHub" },
+    { icon: Github, url: "https://github.com/MrManoj124", label: "GitHub" },
     { icon: Linkedin, url: "https://linkedin.com/in/yourusername", label: "LinkedIn" },
     { icon: Twitter, url: "https://twitter.com/yourusername", label: "Twitter" },
     { icon: Facebook, url: "https://facebook.com/yourusername", label: "Facebook" },
