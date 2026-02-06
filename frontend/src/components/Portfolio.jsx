@@ -634,7 +634,7 @@ const DeveloperPortfolio = () => {
                 <div>
                   <Github className="w-8 h-8 text-purple-400 mx-auto mb-2" />
                   <p className="text-gray-400 text-sm">GitHub</p>
-                  <a href="https://github.com/yourusername" className="text-white font-semibold hover:text-purple-400">@yourusername</a>
+                  <a href="https://github.com/MrManoj124" className="text-white font-semibold hover:text-purple-400">@MrManoj124</a>
                 </div>
                 <div>
                   <Linkedin className="w-8 h-8 text-purple-400 mx-auto mb-2" />
