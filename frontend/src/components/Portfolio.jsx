@@ -13,6 +13,7 @@ const DeveloperPortfolio = () => {
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
 
+
   // Profile data
   const profileData = {
     name: "S.Manoj",
