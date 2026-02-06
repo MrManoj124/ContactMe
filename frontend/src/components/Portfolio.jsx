@@ -639,7 +639,7 @@ const DeveloperPortfolio = () => {
                 <div>
                   <Linkedin className="w-8 h-8 text-purple-400 mx-auto mb-2" />
                   <p className="text-gray-400 text-sm">LinkedIn</p>
-                  <a href="https://linkedin.com/in/yourusername" className="text-white font-semibold hover:text-purple-400">Connect</a>
+                  <a href="https://www.linkedin.com/in/manoj-manorooban" className="text-white font-semibold hover:text-purple-400">Connect</a>
                 </div>
               </div>
             </div>
