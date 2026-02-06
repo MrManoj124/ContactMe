@@ -1,5 +1,5 @@
 //Let's start
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { Menu, X, Github, Linkedin, Facebook, Instagram, Twitter, Mail, Code, Database, Server, Palette, Cpu, Brain, ArrowRight, ExternalLink, Download } from 'lucide-react';
 
 const DeveloperPortfolio = () => {
@@ -190,8 +190,8 @@ const DeveloperPortfolio = () => {
                 <button
                   key={item}
                   onClick={() => scrollToSection(item.toLowerCase())}
-                  className={`text-gray-300 hover:text-purple-400 transition-colors font-medium relative group ${activeSection === item.toLowerCase() ? 'text-purple-400' : ''
-                    }`}
+                  className={`text - gray - 300 hover: text - purple - 400 transition - colors font - medium relative group ${activeSection === item.toLowerCase() ? 'text-purple-400' : ''
+                    } `}
                 >
                   {item}
                   <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-purple-500 to-pink-500 group-hover:w-full transition-all"></span>
@@ -396,8 +396,8 @@ const DeveloperPortfolio = () => {
                     </div>
                     <div className="w-full bg-slate-700 rounded-full h-3 overflow-hidden">
                       <div
-                        className={`h-full bg-gradient-to-r ${skill.color} rounded-full transition-all duration-1000 shadow-lg`}
-                        style={{ width: `${skill.level}%` }}
+                        className={`h - full bg - gradient - to - r ${skill.color} rounded - full transition - all duration - 1000 shadow - lg`}
+                        style={{ width: `${skill.level}% ` }}
                       ></div>
                     </div>
                   </div>
@@ -419,8 +419,8 @@ const DeveloperPortfolio = () => {
                     </div>
                     <div className="w-full bg-slate-700 rounded-full h-3 overflow-hidden">
                       <div
-                        className={`h-full bg-gradient-to-r ${skill.color} rounded-full transition-all duration-1000 shadow-lg`}
-                        style={{ width: `${skill.level}%` }}
+                        className={`h - full bg - gradient - to - r ${skill.color} rounded - full transition - all duration - 1000 shadow - lg`}
+                        style={{ width: `${skill.level}% ` }}
                       ></div>
                     </div>
                   </div>
@@ -442,8 +442,8 @@ const DeveloperPortfolio = () => {
                     </div>
                     <div className="w-full bg-slate-700 rounded-full h-3 overflow-hidden">
                       <div
-                        className={`h-full bg-gradient-to-r ${skill.color} rounded-full transition-all duration-1000 shadow-lg`}
-                        style={{ width: `${skill.level}%` }}
+                        className={`h - full bg - gradient - to - r ${skill.color} rounded - full transition - all duration - 1000 shadow - lg`}
+                        style={{ width: `${skill.level}% ` }}
                       ></div>
                     </div>
                   </div>
@@ -470,7 +470,7 @@ const DeveloperPortfolio = () => {
           <div className="grid md:grid-cols-2 gap-8">
             {projects.map((project, idx) => (
               <div key={idx} className="bg-slate-800/50 backdrop-blur-sm rounded-2xl overflow-hidden border border-purple-500/20 hover:border-purple-500/50 transition-all hover:scale-105 group">
-                <div className={`h-48 bg-gradient-to-br ${gradients[project.image]} flex items-center justify-center relative overflow-hidden`}>
+                <div className={`h - 48 bg - gradient - to - br ${gradients[project.image]} flex items - center justify - center relative overflow - hidden`}>
                   <Code size={80} className="text-white/20 group-hover:scale-110 transition-transform" />
                   <div className="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-all"></div>
                 </div>
@@ -533,7 +533,7 @@ const DeveloperPortfolio = () => {
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {services.map((service, idx) => (
               <div key={idx} className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border border-purple-500/20 hover:border-purple-500/50 transition-all hover:scale-105 group">
-                <div className={`w-16 h-16 bg-gradient-to-r ${service.color} rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform shadow-lg`}>
+                <div className={`w - 16 h - 16 bg - gradient - to - r ${service.color} rounded - xl flex items - center justify - center mb - 6 group - hover: scale - 110 transition - transform shadow - lg`}>
                   <service.icon className="text-white" size={32} />
                 </div>
                 <h3 className="text-xl font-bold text-white mb-4 group-hover:text-purple-400 transition-colors">
