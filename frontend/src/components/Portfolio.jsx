@@ -572,7 +572,7 @@ const DeveloperPortfolio = () => {
                     value={formData.name}
                     onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                     className="w-full px-4 py-3 rounded-lg bg-slate-900/50 border border-purple-500/30 text-white focus:border-purple-500 focus:outline-none transition-all"
-                    placeholder="John Doe"
+                    placeholder="Abina"
                   />
                 </div>
                 <div>
