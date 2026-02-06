@@ -582,7 +582,7 @@ const DeveloperPortfolio = () => {
                     value={formData.email}
                     onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                     className="w-full px-4 py-3 rounded-lg bg-slate-900/50 border border-purple-500/30 text-white focus:border-purple-500 focus:outline-none transition-all"
-                    placeholder="john@example.com"
+                    placeholder="mathew@gmail.com"
                   />
                 </div>
               </div>
