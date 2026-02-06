@@ -1,9 +1,9 @@
 //Let's start
-import React, {useState, useEffect} from 'react';
-import { Menu, X, Github, Linkedin, Facebook, Instagram, Twitter, Mail, Code, Database, Server, Palette, Cpu, Brain, ArrowRight, ExternalLink, Download } from 'lucide-react';}
+import React, { useState, useEffect } from 'react';
+import { Menu, X, Github, Linkedin, Facebook, Instagram, Twitter, Mail, Code, Database, Server, Palette, Cpu, Brain, ArrowRight, ExternalLink, Download } from 'lucide-react';
 
 const DeveloperPortfolio = () => {
-    const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [activeSection, setActiveSection] = useState('home');
   const [formData, setFormData] = useState({
     name: '',
@@ -13,7 +13,7 @@ const DeveloperPortfolio = () => {
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
 
-// Profile data
+  // Profile data
   const profileData = {
     name: "S.Manoj",
     title: "Full Stack Developer",
@@ -40,15 +40,15 @@ const DeveloperPortfolio = () => {
       { name: "MongoDB", level: 85, color: "from-green-500 to-green-700" },
       { name: "PostgreSQL", level: 82, color: "from-blue-600 to-indigo-600" }
     ],
-    backend: [
-      { name: "Node.js", level: 88, color: "from-green-400 to-green-600" },
-      { name: "Express.js", level: 90, color: "from-gray-600 to-gray-800" },
-      { name: "MongoDB", level: 85, color: "from-green-500 to-green-700" },
-      { name: "PostgreSQL", level: 82, color: "from-blue-600 to-indigo-600" }
-    ],
+    tools: [
+      { name: "Git & GitHub", level: 90, color: "from-orange-400 to-red-500" },
+      { name: "Docker", level: 75, color: "from-blue-400 to-blue-600" },
+      { name: "VS Code", level: 95, color: "from-blue-500 to-purple-500" },
+      { name: "Postman", level: 88, color: "from-orange-500 to-orange-700" }
+    ]
+  };
 
-
-   // Projects
+  // Projects
   const projects = [
     {
       title: "E-Commerce Platform",
@@ -82,7 +82,7 @@ const DeveloperPortfolio = () => {
       live: "#",
       image: "gradient-4"
     }
-  ]; 
+  ];
 
   // Services
   const services = [
@@ -112,7 +112,7 @@ const DeveloperPortfolio = () => {
     }
   ];
 
-// Social Links
+  // Social Links
   const socialLinks = [
     { icon: Github, url: "https://github.com/yourusername", label: "GitHub" },
     { icon: Linkedin, url: "https://linkedin.com/in/yourusername", label: "LinkedIn" },
@@ -121,15 +121,15 @@ const DeveloperPortfolio = () => {
     { icon: Instagram, url: "https://instagram.com/yourusername", label: "Instagram" }
   ];
 
-const handleSubmit = async () => {
+  const handleSubmit = async () => {
     if (!formData.name || !formData.email || !formData.subject || !formData.message) {
       alert('Please fill in all fields');
       return;
     }
 
-setIsSubmitting(true);
+    setIsSubmitting(true);
 
-try {
+    try {
       // Replace with your actual API endpoint
       const response = await fetch('http://localhost:5000/api/contact', {
         method: 'POST',
@@ -153,12 +153,12 @@ try {
     }
   };
 
- const scrollToSection = (section) => {
+  const scrollToSection = (section) => {
     setActiveSection(section);
     setIsMenuOpen(false);
   };
 
- const gradients = {
+  const gradients = {
     'gradient-1': 'from-purple-400 via-pink-500 to-red-500',
     'gradient-2': 'from-green-400 via-blue-500 to-purple-600',
     'gradient-3': 'from-yellow-400 via-red-500 to-pink-500',
@@ -171,7 +171,7 @@ try {
       <div className="fixed inset-0 overflow-hidden pointer-events-none">
         <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl animate-pulse"></div>
         <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
-      </div> 
+      </div>
 
       {/* Navigation */}
       <nav className="fixed w-full top-0 z-50 bg-slate-900/80 backdrop-blur-xl border-b border-purple-500/20">
@@ -190,9 +190,8 @@ try {
                 <button
                   key={item}
                   onClick={() => scrollToSection(item.toLowerCase())}
-                  className={`text-gray-300 hover:text-purple-400 transition-colors font-medium relative group ${
-                    activeSection === item.toLowerCase() ? 'text-purple-400' : ''
-                  }`}
+                  className={`text-gray-300 hover:text-purple-400 transition-colors font-medium relative group ${activeSection === item.toLowerCase() ? 'text-purple-400' : ''
+                    }`}
                 >
                   {item}
                   <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-purple-500 to-pink-500 group-hover:w-full transition-all"></span>
@@ -203,7 +202,7 @@ try {
               </button>
             </div>
 
-            
+
             {/* Mobile Menu Button */}
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
@@ -214,7 +213,7 @@ try {
           </div>
         </div>
 
-         {/* Mobile Menu */}
+        {/* Mobile Menu */}
         {isMenuOpen && (
           <div className="md:hidden bg-slate-900/95 backdrop-blur-xl border-t border-purple-500/20">
             <div className="px-4 py-3 space-y-3">
@@ -233,7 +232,7 @@ try {
       </nav>
 
 
-       {/* Hero Section */}
+      {/* Hero Section */}
       <section id="home" className="relative pt-32 pb-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
@@ -262,7 +261,7 @@ try {
 
               {/* CTA Buttons */}
               <div className="flex flex-wrap gap-4">
-                <button 
+                <button
                   onClick={() => scrollToSection('projects')}
                   className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-8 py-3 rounded-lg font-semibold hover:shadow-lg hover:shadow-purple-500/50 transition-all hover:scale-105 flex items-center gap-2"
                 >
@@ -277,7 +276,7 @@ try {
               </div>
 
 
-               {/* Social Links */}
+              {/* Social Links */}
               <div className="pt-8">
                 <p className="text-gray-400 mb-4 font-semibold">CONNECT WITH ME</p>
                 <div className="flex gap-4">
@@ -372,7 +371,7 @@ try {
         </div>
       </section>
 
-       {/* Skills Section */}
+      {/* Skills Section */}
       <section id="skills" className="relative py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
@@ -429,7 +428,7 @@ try {
               </div>
             </div>
 
-             {/* Tools & Technologies */}
+            {/* Tools & Technologies */}
             <div>
               <h3 className="text-2xl font-bold text-white mb-6 flex items-center gap-3">
                 <Cpu className="text-orange-400" /> Tools & Technologies
@@ -549,7 +548,7 @@ try {
         </div>
       </section>
 
-       {/* Contact Section */}
+      {/* Contact Section */}
       <section id="contact" className="relative py-20 px-4 sm:px-6 lg:px-8 bg-slate-900/50">
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-16">
@@ -647,7 +646,7 @@ try {
         </div>
       </section>
 
-       {/* Footer */}
+      {/* Footer */}
       <footer className="relative py-8 px-4 bg-slate-900 border-t border-purple-500/20">
         <div className="max-w-7xl mx-auto">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
