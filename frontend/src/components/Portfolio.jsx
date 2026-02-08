@@ -180,6 +180,14 @@ const DeveloperPortfolio = () => {
           <div className="flex justify-between items-center h-16">
             <div className="flex items-center gap-3">
               <span className="text-xl font-bold text-white">S.Manoj</span>
+              <div className="relative">
+                <div className="absolute inset-0 bg-gradient-to-br from-purple-500 to-pink-500 rounded-full blur-sm opacity-75"></div>
+                <img
+                  src="/profile.jpeg"
+                  alt="S.Manoj Profile"
+                  className="relative w-12 h-12 rounded-full object-cover border-2 border-purple-400 shadow-lg"
+                />
+              </div>
             </div>
 
             {/* Desktop Menu */}
@@ -249,6 +257,7 @@ const DeveloperPortfolio = () => {
                 <h2 className="text-2xl md:text-3xl text-gray-300 font-semibold">
                   {profileData.title}
                 </h2>
+
                 <p className="text-lg text-purple-300 font-medium">
                   Future: {profileData.futureTitle}
                 </p>
