@@ -175,7 +175,7 @@ const DeveloperPortfolio = () => {
       </div>
 
       {/* Navigation */}
-      <nav className="fixed w-full top-0 z-50 bg-slate-900/80 backdrop-blur-xl border-b border-purple-500/20">
+      <nav className="fixed w-full top-0 z-50 bg-[#003153]/90 backdrop-blur-xl border-b border-cyan-400/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
             <div className="flex items-center gap-3">
@@ -188,16 +188,26 @@ const DeveloperPortfolio = () => {
                 <button
                   key={item}
                   onClick={() => scrollToSection(item.toLowerCase())}
-                  className={`text-blue-300 hover:text-purple-400 transition-colors font-medium relative group ${activeSection === item.toLowerCase() ? 'text-purple-400' : ''
+                  className={`text-cyan-100 hover:text-yellow-300 transition-colors font-medium relative group ${activeSection === item.toLowerCase() ? 'text-yellow-300' : ''
                     } `}
                 >
                   {item}
-                  <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-purple-500 to-pink-500 group-hover:w-full transition-all"></span>
+                  <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-yellow-400 to-orange-400 group-hover:w-full transition-all"></span>
                 </button>
               ))}
-              <button className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-6 py-2 rounded-lg hover:shadow-lg hover:shadow-purple-500/50 transition-all hover:scale-105">
-                Hire Me
-              </button>
+              <div className="flex flex-col items-center gap-2">
+                <button className="bg-gradient-to-r from-yellow-500 to-orange-500 text-white px-6 py-2 rounded-lg hover:shadow-lg hover:shadow-yellow-500/50 transition-all hover:scale-105">
+                  Hire Me
+                </button>
+                <div className="relative">
+                  <div className="absolute inset-0 bg-gradient-to-br from-yellow-400 to-orange-400 rounded-full blur-sm opacity-75"></div>
+                  <img
+                    src="/profile.jpg"
+                    alt="S.Manoj Profile"
+                    className="relative w-10 h-10 rounded-full object-cover border-2 border-yellow-300 shadow-lg"
+                  />
+                </div>
+              </div>
             </div>
 
 
@@ -213,13 +223,13 @@ const DeveloperPortfolio = () => {
 
         {/* Mobile Menu */}
         {isMenuOpen && (
-          <div className="md:hidden bg-slate-900/95 backdrop-blur-xl border-t border-purple-500/20">
+          <div className="md:hidden bg-[#003153]/95 backdrop-blur-xl border-t border-cyan-400/30">
             <div className="px-4 py-3 space-y-3">
               {['Home', 'About', 'Skills', 'Projects', 'Services', 'Contact'].map((item) => (
                 <button
                   key={item}
                   onClick={() => scrollToSection(item.toLowerCase())}
-                  className="block w-full text-left text-gray-300 hover:text-purple-400 py-2"
+                  className="block w-full text-left text-cyan-100 hover:text-yellow-300 py-2"
                 >
                   {item}
                 </button>
@@ -237,19 +247,19 @@ const DeveloperPortfolio = () => {
             {/* Content */}
             <div className="space-y-8 z-10">
               <div className="space-y-4">
-                <p className="text-purple-400 font-semibold text-lg tracking-wide animate-fade-in">
+                <p className="text-yellow-300 font-semibold text-lg tracking-wide animate-fade-in">
                   {profileData.welcomeText}
                 </p>
                 <h1 className="text-5xl md:text-7xl font-bold text-white leading-tight">
                   Hi, I'm{' '}
-                  <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600">
+                  <span className="text-transparent bg-clip-text bg-gradient-to-r from-yellow-300 to-orange-400">
                     {profileData.name}
                   </span>
                 </h1>
                 <h2 className="text-2xl md:text-3xl text-gray-300 font-semibold">
                   {profileData.title}
                 </h2>
-                <p className="text-lg text-purple-300 font-medium">
+                <p className="text-lg text-cyan-200 font-medium">
                   Future: {profileData.futureTitle}
                 </p>
                 <p className="text-gray-400 text-lg leading-relaxed max-w-2xl">
