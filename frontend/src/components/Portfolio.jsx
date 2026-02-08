@@ -167,11 +167,11 @@ const DeveloperPortfolio = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+    <div className="min-h-screen bg-gradient-to-br from-[#003153] via-[#2F6D7E] to-[#7FA9AE]">
       {/* Animated Background */}
       <div className="fixed inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl animate-pulse"></div>
-        <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
+        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-[#2F6D7E]/10 rounded-full blur-3xl animate-pulse"></div>
+        <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-[#7FA9AE]/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
       </div>
 
       {/* Navigation */}
@@ -179,14 +179,6 @@ const DeveloperPortfolio = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
             <div className="flex items-center gap-3">
-              <div className="relative">
-                <div className="absolute inset-0 bg-gradient-to-br from-purple-500 to-pink-500 rounded-full blur-sm opacity-75"></div>
-                <img
-                  src="/profile.jpg"
-                  alt="S.Manoj Profile"
-                  className="relative w-12 h-12 rounded-full object-cover border-2 border-purple-400 shadow-lg"
-                />
-              </div>
               <span className="text-xl font-bold text-white">S.Manoj</span>
             </div>
 
@@ -494,19 +486,29 @@ const DeveloperPortfolio = () => {
                       </span>
                     ))}
                   </div>
-                  <div className="flex gap-4 pt-4">
-                    <a
-                      href={project.github}
-                      className="flex items-center gap-2 text-gray-400 hover:text-white transition-colors"
-                    >
-                      <Github size={20} /> Code
-                    </a>
-                    <a
-                      href={project.live}
-                      className="flex items-center gap-2 text-gray-400 hover:text-purple-400 transition-colors"
-                    >
-                      <ExternalLink size={20} /> Live Demo
-                    </a>
+                  <div className="flex items-center justify-between pt-4">
+                    <div className="flex gap-4">
+                      <a
+                        href={project.github}
+                        className="flex items-center gap-2 text-gray-400 hover:text-white transition-colors"
+                      >
+                        <Github size={20} /> Code
+                      </a>
+                      <a
+                        href={project.live}
+                        className="flex items-center gap-2 text-gray-400 hover:text-purple-400 transition-colors"
+                      >
+                        <ExternalLink size={20} /> Live Demo
+                      </a>
+                    </div>
+                    <div className="relative">
+                      <div className="absolute inset-0 bg-gradient-to-br from-purple-500 to-pink-500 rounded-full blur-sm opacity-75"></div>
+                      <img
+                        src="/profile.jpg"
+                        alt="S.Manoj Profile"
+                        className="relative w-12 h-12 rounded-full object-cover border-2 border-purple-400 shadow-lg"
+                      />
+                    </div>
                   </div>
                 </div>
               </div>
