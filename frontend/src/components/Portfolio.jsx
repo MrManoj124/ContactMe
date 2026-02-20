@@ -30,22 +30,22 @@ const DeveloperPortfolio = () => {
   // Tech Stack
   const techStack = {
     frontend: [
-      { name: "React.js", level: 90, color: "from-blue-400 to-blue-600" },
-      { name: "Next.js", level: 85, color: "from-gray-700 to-black" },
-      { name: "Tailwind CSS", level: 95, color: "from-cyan-400 to-blue-500" },
-      { name: "TypeScript", level: 80, color: "from-blue-500 to-blue-700" }
+      { name: "React.js", level: 90, color: "from-[#58A0C8] to-[#34699A]" },
+      { name: "Next.js", level: 85, color: "from-[#34699A] to-[#113F67]" },
+      { name: "Tailwind CSS", level: 95, color: "from-[#58A0C8] to-[#34699A]" },
+      { name: "TypeScript", level: 80, color: "from-[#34699A] to-[#113F67]" }
     ],
     backend: [
-      { name: "Node.js", level: 88, color: "from-green-400 to-green-600" },
-      { name: "Express.js", level: 90, color: "from-gray-600 to-gray-800" },
-      { name: "MongoDB", level: 85, color: "from-green-500 to-green-700" },
-      { name: "PostgreSQL", level: 82, color: "from-blue-600 to-indigo-600" }
+      { name: "Node.js", level: 88, color: "from-[#58A0C8] to-[#34699A]" },
+      { name: "Express.js", level: 90, color: "from-[#34699A] to-[#113F67]" },
+      { name: "MongoDB", level: 85, color: "from-[#58A0C8] to-[#113F67]" },
+      { name: "PostgreSQL", level: 82, color: "from-[#34699A] to-[#113F67]" }
     ],
     tools: [
-      { name: "Git & GitHub", level: 90, color: "from-orange-400 to-red-500" },
-      { name: "Docker", level: 75, color: "from-blue-400 to-blue-600" },
-      { name: "VS Code", level: 95, color: "from-blue-500 to-purple-500" },
-      { name: "Postman", level: 88, color: "from-orange-500 to-orange-700" }
+      { name: "Git & GitHub", level: 90, color: "from-[#FDF5AA] to-[#58A0C8]" },
+      { name: "Docker", level: 75, color: "from-[#58A0C8] to-[#34699A]" },
+      { name: "VS Code", level: 95, color: "from-[#34699A] to-[#113F67]" },
+      { name: "Postman", level: 88, color: "from-[#FDF5AA] to-[#58A0C8]" }
     ]
   };
 
@@ -91,25 +91,25 @@ const DeveloperPortfolio = () => {
       icon: Code,
       title: "Frontend Development",
       description: "Building responsive, performant web applications using React, Next.js, and modern CSS frameworks.",
-      color: "from-blue-500 to-cyan-500"
+      color: "from-[#58A0C8] to-[#34699A]"
     },
     {
       icon: Server,
       title: "Backend Development",
       description: "Developing robust APIs and server-side applications with Node.js, Express, and database integration.",
-      color: "from-green-500 to-emerald-500"
+      color: "from-[#34699A] to-[#113F67]"
     },
     {
       icon: Database,
       title: "Database Design",
       description: "Architecting scalable database solutions with MongoDB, PostgreSQL, and efficient data modeling.",
-      color: "from-purple-500 to-pink-500"
+      color: "from-[#FDF5AA] to-[#58A0C8]"
     },
     {
       icon: Brain,
       title: "AI Integration",
       description: "Implementing machine learning models and AI-powered features to enhance application capabilities.",
-      color: "from-orange-500 to-red-500"
+      color: "from-[#58A0C8] to-[#113F67]"
     }
   ];
 
@@ -160,32 +160,33 @@ const DeveloperPortfolio = () => {
   };
 
   const gradients = {
-    'gradient-1': 'from-purple-400 via-pink-500 to-red-500',
-    'gradient-2': 'from-green-400 via-blue-500 to-purple-600',
-    'gradient-3': 'from-yellow-400 via-red-500 to-pink-500',
-    'gradient-4': 'from-blue-400 via-purple-500 to-pink-500'
+    'gradient-1': 'from-[#34699A] via-[#58A0C8] to-[#FDF5AA]',
+    'gradient-2': 'from-[#113F67] via-[#34699A] to-[#58A0C8]',
+    'gradient-3': 'from-[#FDF5AA] via-[#58A0C8] to-[#34699A]',
+    'gradient-4': 'from-[#58A0C8] via-[#34699A] to-[#113F67]'
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-[#003153] via-[#2F6D7E] to-[#7FA9AE]">
+    <div className="min-h-screen bg-gradient-to-br from-[#113F67] via-[#1a4f7a] to-[#34699A]">
       {/* Animated Background */}
       <div className="fixed inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-[#2F6D7E]/10 rounded-full blur-3xl animate-pulse"></div>
-        <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-[#7FA9AE]/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
+        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-[#34699A]/15 rounded-full blur-3xl animate-pulse"></div>
+        <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-[#58A0C8]/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
+        <div className="absolute top-1/2 right-1/3 w-64 h-64 bg-[#FDF5AA]/5 rounded-full blur-3xl animate-pulse delay-500"></div>
       </div>
 
       {/* Navigation */}
-      <nav className="fixed w-full top-0 z-50 bg-slate-900/80 backdrop-blur-xl border-b border-purple-500/20">
+      <nav className="fixed w-full top-0 z-50 bg-[#113F67]/90 backdrop-blur-xl border-b border-[#58A0C8]/20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
             <div className="flex items-center gap-3">
               <span className="text-xl font-bold text-white">S.Manoj</span>
               <div className="relative">
-                <div className="absolute inset-0 bg-gradient-to-br from-purple-500 to-pink-500 rounded-full blur-sm opacity-75"></div>
+                <div className="absolute inset-0 bg-gradient-to-br from-[#58A0C8] to-[#FDF5AA] rounded-full blur-sm opacity-75"></div>
                 <img
                   src="/profile.jpeg"
                   alt="S.Manoj Profile"
-                  className="relative w-12 h-12 rounded-full object-cover border-2 border-purple-400 shadow-lg"
+                  className="relative w-12 h-12 rounded-full object-cover border-2 border-[#58A0C8] shadow-lg"
                 />
               </div>
             </div>
@@ -196,14 +197,14 @@ const DeveloperPortfolio = () => {
                 <button
                   key={item}
                   onClick={() => scrollToSection(item.toLowerCase())}
-                  className={`text-blue-300 hover:text-purple-400 transition-colors font-medium relative group ${activeSection === item.toLowerCase() ? 'text-purple-400' : ''
+                  className={`text-[#58A0C8] hover:text-[#FDF5AA] transition-colors font-medium relative group ${activeSection === item.toLowerCase() ? 'text-[#FDF5AA]' : ''
                     } `}
                 >
                   {item}
-                  <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-purple-500 to-pink-500 group-hover:w-full transition-all"></span>
+                  <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-[#58A0C8] to-[#FDF5AA] group-hover:w-full transition-all"></span>
                 </button>
               ))}
-              <button className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-6 py-2 rounded-lg hover:shadow-lg hover:shadow-purple-500/50 transition-all hover:scale-105">
+              <button className="bg-gradient-to-r from-[#58A0C8] to-[#FDF5AA] text-[#113F67] px-6 py-2 rounded-lg font-semibold hover:shadow-lg hover:shadow-[#58A0C8]/50 transition-all hover:scale-105">
                 Hire Me
               </button>
             </div>
@@ -221,13 +222,13 @@ const DeveloperPortfolio = () => {
 
         {/* Mobile Menu */}
         {isMenuOpen && (
-          <div className="md:hidden bg-slate-900/95 backdrop-blur-xl border-t border-purple-500/20">
+          <div className="md:hidden bg-[#113F67]/95 backdrop-blur-xl border-t border-[#58A0C8]/20">
             <div className="px-4 py-3 space-y-3">
               {['Home', 'About', 'Skills', 'Projects', 'Services', 'Contact'].map((item) => (
                 <button
                   key={item}
                   onClick={() => scrollToSection(item.toLowerCase())}
-                  className="block w-full text-left text-gray-300 hover:text-purple-400 py-2"
+                  className="block w-full text-left text-gray-300 hover:text-[#FDF5AA] py-2"
                 >
                   {item}
                 </button>
@@ -245,12 +246,12 @@ const DeveloperPortfolio = () => {
             {/* Content */}
             <div className="space-y-8 z-10">
               <div className="space-y-4">
-                <p className="text-purple-400 font-semibold text-lg tracking-wide animate-fade-in">
+                <p className="text-[#FDF5AA] font-semibold text-lg tracking-wide animate-fade-in">
                   {profileData.welcomeText}
                 </p>
                 <h1 className="text-5xl md:text-7xl font-bold text-white leading-tight">
                   Hi, I'm{' '}
-                  <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600">
+                  <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#58A0C8] to-[#FDF5AA]">
                     {profileData.name}
                   </span>
                 </h1>
@@ -258,7 +259,7 @@ const DeveloperPortfolio = () => {
                   {profileData.title}
                 </h2>
 
-                <p className="text-lg text-purple-300 font-medium">
+                <p className="text-lg text-[#58A0C8] font-medium">
                   Future: {profileData.futureTitle}
                 </p>
                 <p className="text-gray-400 text-lg leading-relaxed max-w-2xl">
@@ -270,13 +271,13 @@ const DeveloperPortfolio = () => {
               <div className="flex flex-wrap gap-4">
                 <button
                   onClick={() => scrollToSection('projects')}
-                  className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-8 py-3 rounded-lg font-semibold hover:shadow-lg hover:shadow-purple-500/50 transition-all hover:scale-105 flex items-center gap-2"
+                  className="bg-gradient-to-r from-[#58A0C8] to-[#FDF5AA] text-[#113F67] px-8 py-3 rounded-lg font-semibold hover:shadow-lg hover:shadow-[#58A0C8]/50 transition-all hover:scale-105 flex items-center gap-2"
                 >
                   View Projects <ArrowRight size={20} />
                 </button>
                 <a
                   href={profileData.resumeUrl}
-                  className="border-2 border-purple-500 text-purple-400 px-8 py-3 rounded-lg font-semibold hover:bg-purple-500/10 transition-all flex items-center gap-2"
+                  className="border-2 border-[#58A0C8] text-[#58A0C8] px-8 py-3 rounded-lg font-semibold hover:bg-[#58A0C8]/10 transition-all flex items-center gap-2"
                 >
                   <Download size={20} /> Download CV
                 </a>
@@ -293,7 +294,7 @@ const DeveloperPortfolio = () => {
                       href={social.url}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="w-12 h-12 rounded-lg bg-slate-800/50 backdrop-blur-sm border border-purple-500/20 flex items-center justify-center text-gray-400 hover:text-purple-400 hover:border-purple-500 transition-all hover:scale-110 hover:shadow-lg hover:shadow-purple-500/30"
+                      className="w-12 h-12 rounded-lg bg-[#113F67]/80 backdrop-blur-sm border border-[#34699A]/40 flex items-center justify-center text-gray-400 hover:text-[#FDF5AA] hover:border-[#58A0C8] transition-all hover:scale-110 hover:shadow-lg hover:shadow-[#58A0C8]/30"
                       title={social.label}
                     >
                       <social.icon size={20} />
@@ -307,16 +308,16 @@ const DeveloperPortfolio = () => {
             {/* Profile Image/Visual */}
             <div className="relative z-10 hidden lg:block">
               <div className="relative">
-                <div className="absolute inset-0 bg-gradient-to-r from-purple-500 to-pink-500 rounded-3xl blur-3xl opacity-30 animate-pulse"></div>
-                <div className="relative bg-gradient-to-br from-slate-800 to-slate-900 rounded-3xl p-8 border border-purple-500/20">
+                <div className="absolute inset-0 bg-gradient-to-r from-[#58A0C8] to-[#FDF5AA] rounded-3xl blur-3xl opacity-20 animate-pulse"></div>
+                <div className="relative bg-gradient-to-br from-[#113F67] to-[#1a3550] rounded-3xl p-8 border border-[#34699A]/30">
                   <div className="space-y-4">
-                    <div className="h-64 bg-gradient-to-br from-purple-500/20 to-pink-500/20 rounded-2xl flex items-center justify-center">
-                      <Code size={120} className="text-purple-400" />
+                    <div className="h-64 bg-gradient-to-br from-[#34699A]/30 to-[#58A0C8]/20 rounded-2xl flex items-center justify-center">
+                      <Code size={120} className="text-[#58A0C8]" />
                     </div>
                     <div className="grid grid-cols-3 gap-4">
                       {['React', 'Node.js', 'MongoDB'].map((tech, idx) => (
-                        <div key={idx} className="bg-slate-800/50 rounded-lg p-3 text-center border border-purple-500/10">
-                          <p className="text-purple-400 font-semibold text-sm">{tech}</p>
+                        <div key={idx} className="bg-[#113F67]/70 rounded-lg p-3 text-center border border-[#34699A]/20">
+                          <p className="text-[#58A0C8] font-semibold text-sm">{tech}</p>
                         </div>
                       ))}
                     </div>
@@ -330,13 +331,13 @@ const DeveloperPortfolio = () => {
 
 
       {/* About Section */}
-      <section id="about" className="relative py-20 px-4 sm:px-6 lg:px-8 bg-slate-900/50">
+      <section id="about" className="relative py-20 px-4 sm:px-6 lg:px-8 bg-[#113F67]/60">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
-              About <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600">Me</span>
+              About <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#58A0C8] to-[#FDF5AA]">Me</span>
             </h2>
-            <div className="w-24 h-1 bg-gradient-to-r from-purple-500 to-pink-500 mx-auto"></div>
+            <div className="w-24 h-1 bg-gradient-to-r from-[#58A0C8] to-[#FDF5AA] mx-auto"></div>
           </div>
 
           <div className="grid md:grid-cols-2 gap-12 items-center">
@@ -349,11 +350,11 @@ const DeveloperPortfolio = () => {
               </p>
               <div className="grid grid-cols-2 gap-6 pt-4">
                 <div className="space-y-2">
-                  <p className="text-purple-400 font-semibold">Email</p>
+                  <p className="text-[#58A0C8] font-semibold">Email</p>
                   <p className="text-gray-400">{profileData.email}</p>
                 </div>
                 <div className="space-y-2">
-                  <p className="text-purple-400 font-semibold">Location</p>
+                  <p className="text-[#58A0C8] font-semibold">Location</p>
                   <p className="text-gray-400">{profileData.location}</p>
                 </div>
               </div>
@@ -366,8 +367,8 @@ const DeveloperPortfolio = () => {
                 { number: "500+", label: "GitHub Commits" },
                 { number: "100%", label: "Client Satisfaction" }
               ].map((stat, idx) => (
-                <div key={idx} className="bg-gradient-to-br from-slate-800 to-slate-900 rounded-2xl p-6 border border-purple-500/20 hover:border-purple-500/50 transition-all">
-                  <h3 className="text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600 mb-2">
+                <div key={idx} className="bg-gradient-to-br from-[#113F67] to-[#1a3550] rounded-2xl p-6 border border-[#34699A]/30 hover:border-[#58A0C8]/50 transition-all">
+                  <h3 className="text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#58A0C8] to-[#FDF5AA] mb-2">
                     {stat.number}
                   </h3>
                   <p className="text-gray-400">{stat.label}</p>
@@ -383,28 +384,28 @@ const DeveloperPortfolio = () => {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
-              Technical <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600">Skills</span>
+              Technical <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#58A0C8] to-[#FDF5AA]">Skills</span>
             </h2>
-            <div className="w-24 h-1 bg-gradient-to-r from-purple-500 to-pink-500 mx-auto"></div>
+            <div className="w-24 h-1 bg-gradient-to-r from-[#58A0C8] to-[#FDF5AA] mx-auto"></div>
           </div>
 
           <div className="space-y-12">
             {/* Frontend */}
             <div>
               <h3 className="text-2xl font-bold text-white mb-6 flex items-center gap-3">
-                <Palette className="text-purple-400" /> Frontend Development
+                <Palette className="text-[#58A0C8]" /> Frontend Development
               </h3>
               <div className="grid md:grid-cols-2 gap-6">
                 {techStack.frontend.map((skill, idx) => (
-                  <div key={idx} className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-purple-500/20 hover:border-purple-500/50 transition-all">
+                  <div key={idx} className="bg-[#113F67]/70 backdrop-blur-sm rounded-xl p-6 border border-[#34699A]/30 hover:border-[#58A0C8]/50 transition-all">
                     <div className="flex justify-between items-center mb-3">
                       <span className="text-white font-semibold text-lg">{skill.name}</span>
-                      <span className="text-purple-400 font-bold">{skill.level}%</span>
+                      <span className="text-[#58A0C8] font-bold">{skill.level}%</span>
                     </div>
-                    <div className="w-full bg-slate-700 rounded-full h-3 overflow-hidden">
+                    <div className="w-full bg-[#113F67] rounded-full h-3 overflow-hidden">
                       <div
-                        className={`h - full bg - gradient - to - r ${skill.color} rounded - full transition - all duration - 1000 shadow - lg`}
-                        style={{ width: `${skill.level}% ` }}
+                        className={`h-full bg-gradient-to-r ${skill.color} rounded-full transition-all duration-1000 shadow-lg`}
+                        style={{ width: `${skill.level}%` }}
                       ></div>
                     </div>
                   </div>
@@ -415,19 +416,19 @@ const DeveloperPortfolio = () => {
             {/* Backend */}
             <div>
               <h3 className="text-2xl font-bold text-white mb-6 flex items-center gap-3">
-                <Server className="text-green-400" /> Backend Development
+                <Server className="text-[#34699A]" /> Backend Development
               </h3>
               <div className="grid md:grid-cols-2 gap-6">
                 {techStack.backend.map((skill, idx) => (
-                  <div key={idx} className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-green-500/20 hover:border-green-500/50 transition-all">
+                  <div key={idx} className="bg-[#113F67]/70 backdrop-blur-sm rounded-xl p-6 border border-[#34699A]/30 hover:border-[#34699A]/60 transition-all">
                     <div className="flex justify-between items-center mb-3">
                       <span className="text-white font-semibold text-lg">{skill.name}</span>
-                      <span className="text-green-400 font-bold">{skill.level}%</span>
+                      <span className="text-[#34699A] font-bold">{skill.level}%</span>
                     </div>
-                    <div className="w-full bg-slate-700 rounded-full h-3 overflow-hidden">
+                    <div className="w-full bg-[#113F67] rounded-full h-3 overflow-hidden">
                       <div
-                        className={`h - full bg - gradient - to - r ${skill.color} rounded - full transition - all duration - 1000 shadow - lg`}
-                        style={{ width: `${skill.level}% ` }}
+                        className={`h-full bg-gradient-to-r ${skill.color} rounded-full transition-all duration-1000 shadow-lg`}
+                        style={{ width: `${skill.level}%` }}
                       ></div>
                     </div>
                   </div>
@@ -438,19 +439,19 @@ const DeveloperPortfolio = () => {
             {/* Tools & Technologies */}
             <div>
               <h3 className="text-2xl font-bold text-white mb-6 flex items-center gap-3">
-                <Cpu className="text-orange-400" /> Tools & Technologies
+                <Cpu className="text-[#FDF5AA]" /> Tools & Technologies
               </h3>
               <div className="grid md:grid-cols-2 gap-6">
                 {techStack.tools.map((skill, idx) => (
-                  <div key={idx} className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-orange-500/20 hover:border-orange-500/50 transition-all">
+                  <div key={idx} className="bg-[#113F67]/70 backdrop-blur-sm rounded-xl p-6 border border-[#FDF5AA]/15 hover:border-[#FDF5AA]/40 transition-all">
                     <div className="flex justify-between items-center mb-3">
                       <span className="text-white font-semibold text-lg">{skill.name}</span>
-                      <span className="text-orange-400 font-bold">{skill.level}%</span>
+                      <span className="text-[#FDF5AA] font-bold">{skill.level}%</span>
                     </div>
-                    <div className="w-full bg-slate-700 rounded-full h-3 overflow-hidden">
+                    <div className="w-full bg-[#113F67] rounded-full h-3 overflow-hidden">
                       <div
-                        className={`h - full bg - gradient - to - r ${skill.color} rounded - full transition - all duration - 1000 shadow - lg`}
-                        style={{ width: `${skill.level}% ` }}
+                        className={`h-full bg-gradient-to-r ${skill.color} rounded-full transition-all duration-1000 shadow-lg`}
+                        style={{ width: `${skill.level}%` }}
                       ></div>
                     </div>
                   </div>
@@ -462,13 +463,13 @@ const DeveloperPortfolio = () => {
       </section>
 
       {/* Projects Section */}
-      <section id="projects" className="relative py-20 px-4 sm:px-6 lg:px-8 bg-slate-900/50">
+      <section id="projects" className="relative py-20 px-4 sm:px-6 lg:px-8 bg-[#113F67]/60">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
-              Featured <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600">Projects</span>
+              Featured <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#58A0C8] to-[#FDF5AA]">Projects</span>
             </h2>
-            <div className="w-24 h-1 bg-gradient-to-r from-purple-500 to-pink-500 mx-auto mb-4"></div>
+            <div className="w-24 h-1 bg-gradient-to-r from-[#58A0C8] to-[#FDF5AA] mx-auto mb-4"></div>
             <p className="text-gray-400 text-lg max-w-2xl mx-auto">
               Explore some of my recent work showcasing full-stack development, API integration, and modern web technologies.
             </p>
@@ -476,13 +477,13 @@ const DeveloperPortfolio = () => {
 
           <div className="grid md:grid-cols-2 gap-8">
             {projects.map((project, idx) => (
-              <div key={idx} className="bg-slate-800/50 backdrop-blur-sm rounded-2xl overflow-hidden border border-purple-500/20 hover:border-purple-500/50 transition-all hover:scale-105 group">
-                <div className={`h - 48 bg - gradient - to - br ${gradients[project.image]} flex items - center justify - center relative overflow - hidden`}>
+              <div key={idx} className="bg-[#113F67]/70 backdrop-blur-sm rounded-2xl overflow-hidden border border-[#34699A]/30 hover:border-[#58A0C8]/50 transition-all hover:scale-105 group">
+                <div className={`h-48 bg-gradient-to-br ${gradients[project.image]} flex items-center justify-center relative overflow-hidden`}>
                   <Code size={80} className="text-white/20 group-hover:scale-110 transition-transform" />
                   <div className="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-all"></div>
                 </div>
                 <div className="p-6 space-y-4">
-                  <h3 className="text-2xl font-bold text-white group-hover:text-purple-400 transition-colors">
+                  <h3 className="text-2xl font-bold text-white group-hover:text-[#FDF5AA] transition-colors">
                     {project.title}
                   </h3>
                   <p className="text-gray-400 leading-relaxed">
@@ -490,7 +491,7 @@ const DeveloperPortfolio = () => {
                   </p>
                   <div className="flex flex-wrap gap-2">
                     {project.tech.map((tech, i) => (
-                      <span key={i} className="px-3 py-1 bg-purple-500/20 text-purple-300 rounded-full text-sm border border-purple-500/30">
+                      <span key={i} className="px-3 py-1 bg-[#34699A]/30 text-[#58A0C8] rounded-full text-sm border border-[#34699A]/40">
                         {tech}
                       </span>
                     ))}
@@ -505,7 +506,7 @@ const DeveloperPortfolio = () => {
                       </a>
                       <a
                         href={project.live}
-                        className="flex items-center gap-2 text-gray-400 hover:text-purple-400 transition-colors"
+                        className="flex items-center gap-2 text-gray-400 hover:text-[#FDF5AA] transition-colors"
                       >
                         <ExternalLink size={20} /> Live Demo
                       </a>
@@ -522,7 +523,7 @@ const DeveloperPortfolio = () => {
               href="https://github.com/MrManoj124"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-500 to-pink-500 text-white px-8 py-3 rounded-lg font-semibold hover:shadow-lg hover:shadow-purple-500/50 transition-all hover:scale-105"
+              className="inline-flex items-center gap-2 bg-gradient-to-r from-[#58A0C8] to-[#FDF5AA] text-[#113F67] px-8 py-3 rounded-lg font-semibold hover:shadow-lg hover:shadow-[#58A0C8]/50 transition-all hover:scale-105"
             >
               <Github size={20} /> View All Projects on GitHub
             </a>
@@ -535,18 +536,18 @@ const DeveloperPortfolio = () => {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
-              What I <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600">Offer</span>
+              What I <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#58A0C8] to-[#FDF5AA]">Offer</span>
             </h2>
-            <div className="w-24 h-1 bg-gradient-to-r from-purple-500 to-pink-500 mx-auto"></div>
+            <div className="w-24 h-1 bg-gradient-to-r from-[#58A0C8] to-[#FDF5AA] mx-auto"></div>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {services.map((service, idx) => (
-              <div key={idx} className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border border-purple-500/20 hover:border-purple-500/50 transition-all hover:scale-105 group">
-                <div className={`w - 16 h - 16 bg - gradient - to - r ${service.color} rounded - xl flex items - center justify - center mb - 6 group - hover: scale - 110 transition - transform shadow - lg`}>
+              <div key={idx} className="bg-[#113F67]/70 backdrop-blur-sm rounded-2xl p-8 border border-[#34699A]/30 hover:border-[#58A0C8]/50 transition-all hover:scale-105 group">
+                <div className={`w-16 h-16 bg-gradient-to-r ${service.color} rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform shadow-lg`}>
                   <service.icon className="text-white" size={32} />
                 </div>
-                <h3 className="text-xl font-bold text-white mb-4 group-hover:text-purple-400 transition-colors">
+                <h3 className="text-xl font-bold text-white mb-4 group-hover:text-[#FDF5AA] transition-colors">
                   {service.title}
                 </h3>
                 <p className="text-gray-400 leading-relaxed">
@@ -559,70 +560,70 @@ const DeveloperPortfolio = () => {
       </section>
 
       {/* Contact Section */}
-      <section id="contact" className="relative py-20 px-4 sm:px-6 lg:px-8 bg-slate-900/50">
+      <section id="contact" className="relative py-20 px-4 sm:px-6 lg:px-8 bg-[#113F67]/60">
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
-              Get In <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600">Touch</span>
+              Get In <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#58A0C8] to-[#FDF5AA]">Touch</span>
             </h2>
-            <div className="w-24 h-1 bg-gradient-to-r from-purple-500 to-pink-500 mx-auto mb-4"></div>
+            <div className="w-24 h-1 bg-gradient-to-r from-[#58A0C8] to-[#FDF5AA] mx-auto mb-4"></div>
             <p className="text-gray-400 text-lg">
               Have a project in mind? Let's work together to bring your ideas to life!
             </p>
           </div>
 
-          <div className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border border-purple-500/20">
+          <div className="bg-[#113F67]/70 backdrop-blur-sm rounded-2xl p-8 border border-[#34699A]/30">
             <div className="space-y-6">
               <div className="grid md:grid-cols-2 gap-6">
                 <div>
-                  <label className="block text-purple-400 font-semibold mb-2">Your Name</label>
+                  <label className="block text-[#58A0C8] font-semibold mb-2">Your Name</label>
                   <input
                     type="text"
                     value={formData.name}
                     onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                    className="w-full px-4 py-3 rounded-lg bg-slate-900/50 border border-purple-500/30 text-white focus:border-purple-500 focus:outline-none transition-all"
+                    className="w-full px-4 py-3 rounded-lg bg-[#0d3050]/60 border border-[#34699A]/40 text-white focus:border-[#58A0C8] focus:outline-none transition-all placeholder-gray-500"
                     placeholder="Abina"
                   />
                 </div>
                 <div>
-                  <label className="block text-purple-400 font-semibold mb-2">Your Email</label>
+                  <label className="block text-[#58A0C8] font-semibold mb-2">Your Email</label>
                   <input
                     type="email"
                     value={formData.email}
                     onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                    className="w-full px-4 py-3 rounded-lg bg-slate-900/50 border border-purple-500/30 text-white focus:border-purple-500 focus:outline-none transition-all"
+                    className="w-full px-4 py-3 rounded-lg bg-[#0d3050]/60 border border-[#34699A]/40 text-white focus:border-[#58A0C8] focus:outline-none transition-all placeholder-gray-500"
                     placeholder="mathew@gmail.com"
                   />
                 </div>
               </div>
               <div>
-                <label className="block text-purple-400 font-semibold mb-2">Subject</label>
+                <label className="block text-[#58A0C8] font-semibold mb-2">Subject</label>
                 <input
                   type="text"
                   value={formData.subject}
                   onChange={(e) => setFormData({ ...formData, subject: e.target.value })}
-                  className="w-full px-4 py-3 rounded-lg bg-slate-900/50 border border-purple-500/30 text-white focus:border-purple-500 focus:outline-none transition-all"
+                  className="w-full px-4 py-3 rounded-lg bg-[#0d3050]/60 border border-[#34699A]/40 text-white focus:border-[#58A0C8] focus:outline-none transition-all placeholder-gray-500"
                   placeholder="Project Inquiry"
                 />
               </div>
               <div>
-                <label className="block text-purple-400 font-semibold mb-2">Message</label>
+                <label className="block text-[#58A0C8] font-semibold mb-2">Message</label>
                 <textarea
                   value={formData.message}
                   onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                   rows="6"
-                  className="w-full px-4 py-3 rounded-lg bg-slate-900/50 border border-purple-500/30 text-white focus:border-purple-500 focus:outline-none transition-all resize-none"
+                  className="w-full px-4 py-3 rounded-lg bg-[#0d3050]/60 border border-[#34699A]/40 text-white focus:border-[#58A0C8] focus:outline-none transition-all resize-none placeholder-gray-500"
                   placeholder="Tell me about your project..."
                 ></textarea>
               </div>
               <button
                 onClick={handleSubmit}
                 disabled={isSubmitting}
-                className="w-full bg-gradient-to-r from-purple-500 to-pink-500 text-white py-4 rounded-lg font-semibold hover:shadow-lg hover:shadow-purple-500/50 transition-all hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
+                className="w-full bg-gradient-to-r from-[#58A0C8] to-[#FDF5AA] text-[#113F67] py-4 rounded-lg font-semibold hover:shadow-lg hover:shadow-[#58A0C8]/50 transition-all hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
               >
                 {isSubmitting ? (
                   <>
-                    <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin"></div>
+                    <div className="w-5 h-5 border-2 border-[#113F67] border-t-transparent rounded-full animate-spin"></div>
                     Sending...
                   </>
                 ) : (
@@ -633,22 +634,22 @@ const DeveloperPortfolio = () => {
               </button>
             </div>
 
-            <div className="mt-8 pt-8 border-t border-purple-500/20">
+            <div className="mt-8 pt-8 border-t border-[#34699A]/30">
               <div className="grid md:grid-cols-3 gap-6 text-center">
                 <div>
-                  <Mail className="w-8 h-8 text-purple-400 mx-auto mb-2" />
+                  <Mail className="w-8 h-8 text-[#58A0C8] mx-auto mb-2" />
                   <p className="text-gray-400 text-sm">Email</p>
                   <p className="text-white font-semibold">{profileData.email}</p>
                 </div>
                 <div>
-                  <Github className="w-8 h-8 text-purple-400 mx-auto mb-2" />
+                  <Github className="w-8 h-8 text-[#58A0C8] mx-auto mb-2" />
                   <p className="text-gray-400 text-sm">GitHub</p>
-                  <a href="https://github.com/MrManoj124" className="text-white font-semibold hover:text-purple-400">@MrManoj124</a>
+                  <a href="https://github.com/MrManoj124" className="text-white font-semibold hover:text-[#FDF5AA]">@MrManoj124</a>
                 </div>
                 <div>
-                  <Linkedin className="w-8 h-8 text-purple-400 mx-auto mb-2" />
+                  <Linkedin className="w-8 h-8 text-[#58A0C8] mx-auto mb-2" />
                   <p className="text-gray-400 text-sm">LinkedIn</p>
-                  <a href="https://www.linkedin.com/in/manoj-manorooban" className="text-white font-semibold hover:text-purple-400">Mr Manoj</a>
+                  <a href="https://www.linkedin.com/in/manoj-manorooban" className="text-white font-semibold hover:text-[#FDF5AA]">Mr Manoj</a>
                 </div>
               </div>
             </div>
@@ -657,11 +658,11 @@ const DeveloperPortfolio = () => {
       </section>
 
       {/* Footer */}
-      <footer className="relative py-8 px-4 bg-slate-900 border-t border-purple-500/20">
+      <footer className="relative py-8 px-4 bg-[#0d2d45] border-t border-[#34699A]/30">
         <div className="max-w-7xl mx-auto">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-gray-400">
-              © 2024 <span className="text-purple-400 font-semibold">DevPortfolio</span>. Crafted with 💜 by {profileData.name}
+              © 2024 <span className="text-[#58A0C8] font-semibold">DevPortfolio</span>. Crafted with 💛 by {profileData.name}
             </p>
             <div className="flex gap-4">
               {socialLinks.map((social, idx) => (
@@ -670,7 +671,7 @@ const DeveloperPortfolio = () => {
                   href={social.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-gray-400 hover:text-purple-400 transition-colors"
+                  className="text-gray-400 hover:text-[#FDF5AA] transition-colors"
                 >
                   <social.icon size={20} />
                 </a>
