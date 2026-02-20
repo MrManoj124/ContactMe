@@ -16,7 +16,7 @@ const Navbar = () => {
 
 
   return (
-    <nav className="fixed w-full top-0 z-50 bg-[#113F67]/90 backdrop-blur-xl border-b border-[#58A0C8]/20">
+    <nav className="fixed w-full top-0 z-50 bg-[#1C0770]/90 backdrop-blur-xl border-b border-[#58A0C8]/20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           <div className="flex items-center">
@@ -37,7 +37,7 @@ const Navbar = () => {
                 <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-[#58A0C8] to-[#FDF5AA] group-hover:w-full transition-all"></span>
               </button>
             ))}
-            <button className="bg-gradient-to-r from-[#58A0C8] to-[#FDF5AA] text-[#113F67] px-6 py-2 rounded-lg font-semibold hover:shadow-lg hover:shadow-[#58A0C8]/50 transition-all hover:scale-105">
+            <button className="bg-gradient-to-r from-[#58A0C8] to-[#FDF5AA] text-[#1C0770] px-6 py-2 rounded-lg font-semibold hover:shadow-lg hover:shadow-[#58A0C8]/50 transition-all hover:scale-105">
               Hire Me
             </button>
           </div>
@@ -54,7 +54,7 @@ const Navbar = () => {
 
       {/* Mobile Menu */}
       {isMenuOpen && (
-        <div className="md:hidden bg-[#113F67]/95 backdrop-blur-xl border-t border-[#58A0C8]/20">
+        <div className="md:hidden bg-[#1C0770]/95 backdrop-blur-xl border-t border-[#58A0C8]/20">
           <div className="px-4 py-3 space-y-3">
             {navItems.map((item) => (
               <button
