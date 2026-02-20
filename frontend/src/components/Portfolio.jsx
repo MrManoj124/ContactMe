@@ -167,16 +167,16 @@ const DeveloperPortfolio = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-[#113F67] via-[#1a4f7a] to-[#34699A]">
+    <div className="min-h-screen bg-gradient-to-br from-[#0a1628] via-[#0e2240] to-[#113F67]">
       {/* Animated Background */}
       <div className="fixed inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-[#34699A]/15 rounded-full blur-3xl animate-pulse"></div>
+        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-[#34699A]/10 rounded-full blur-3xl animate-pulse"></div>
         <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-[#58A0C8]/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
         <div className="absolute top-1/2 right-1/3 w-64 h-64 bg-[#FDF5AA]/5 rounded-full blur-3xl animate-pulse delay-500"></div>
       </div>
 
       {/* Navigation */}
-      <nav className="fixed w-full top-0 z-50 bg-[#113F67]/90 backdrop-blur-xl border-b border-[#58A0C8]/20">
+      <nav className="fixed w-full top-0 z-50 bg-[#080f1e]/95 backdrop-blur-xl border-b border-[#58A0C8]/20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
             <div className="flex items-center gap-3">
@@ -204,7 +204,7 @@ const DeveloperPortfolio = () => {
                   <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-[#58A0C8] to-[#FDF5AA] group-hover:w-full transition-all"></span>
                 </button>
               ))}
-              <button className="bg-gradient-to-r from-[#58A0C8] to-[#FDF5AA] text-[#113F67] px-6 py-2 rounded-lg font-semibold hover:shadow-lg hover:shadow-[#58A0C8]/50 transition-all hover:scale-105">
+              <button className="bg-gradient-to-r from-[#58A0C8] to-[#FDF5AA] text-[#0a1628] px-6 py-2 rounded-lg font-semibold hover:shadow-lg hover:shadow-[#58A0C8]/50 transition-all hover:scale-105">
                 Hire Me
               </button>
             </div>
@@ -222,7 +222,7 @@ const DeveloperPortfolio = () => {
 
         {/* Mobile Menu */}
         {isMenuOpen && (
-          <div className="md:hidden bg-[#113F67]/95 backdrop-blur-xl border-t border-[#58A0C8]/20">
+          <div className="md:hidden bg-[#080f1e]/95 backdrop-blur-xl border-t border-[#58A0C8]/20">
             <div className="px-4 py-3 space-y-3">
               {['Home', 'About', 'Skills', 'Projects', 'Services', 'Contact'].map((item) => (
                 <button
@@ -271,7 +271,7 @@ const DeveloperPortfolio = () => {
               <div className="flex flex-wrap gap-4">
                 <button
                   onClick={() => scrollToSection('projects')}
-                  className="bg-gradient-to-r from-[#58A0C8] to-[#FDF5AA] text-[#113F67] px-8 py-3 rounded-lg font-semibold hover:shadow-lg hover:shadow-[#58A0C8]/50 transition-all hover:scale-105 flex items-center gap-2"
+                  className="bg-gradient-to-r from-[#58A0C8] to-[#FDF5AA] text-[#0a1628] px-8 py-3 rounded-lg font-semibold hover:shadow-lg hover:shadow-[#58A0C8]/50 transition-all hover:scale-105 flex items-center gap-2"
                 >
                   View Projects <ArrowRight size={20} />
                 </button>
@@ -294,7 +294,7 @@ const DeveloperPortfolio = () => {
                       href={social.url}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="w-12 h-12 rounded-lg bg-[#113F67]/80 backdrop-blur-sm border border-[#34699A]/40 flex items-center justify-center text-gray-400 hover:text-[#FDF5AA] hover:border-[#58A0C8] transition-all hover:scale-110 hover:shadow-lg hover:shadow-[#58A0C8]/30"
+                      className="w-12 h-12 rounded-lg bg-[#0a1628]/80 backdrop-blur-sm border border-[#34699A]/40 flex items-center justify-center text-gray-400 hover:text-[#FDF5AA] hover:border-[#58A0C8] transition-all hover:scale-110 hover:shadow-lg hover:shadow-[#58A0C8]/30"
                       title={social.label}
                     >
                       <social.icon size={20} />
@@ -309,14 +309,14 @@ const DeveloperPortfolio = () => {
             <div className="relative z-10 hidden lg:block">
               <div className="relative">
                 <div className="absolute inset-0 bg-gradient-to-r from-[#58A0C8] to-[#FDF5AA] rounded-3xl blur-3xl opacity-20 animate-pulse"></div>
-                <div className="relative bg-gradient-to-br from-[#113F67] to-[#1a3550] rounded-3xl p-8 border border-[#34699A]/30">
+                <div className="relative bg-gradient-to-br from-[#0a1628] to-[#0e2240] rounded-3xl p-8 border border-[#34699A]/30">
                   <div className="space-y-4">
                     <div className="h-64 bg-gradient-to-br from-[#34699A]/30 to-[#58A0C8]/20 rounded-2xl flex items-center justify-center">
                       <Code size={120} className="text-[#58A0C8]" />
                     </div>
                     <div className="grid grid-cols-3 gap-4">
                       {['React', 'Node.js', 'MongoDB'].map((tech, idx) => (
-                        <div key={idx} className="bg-[#113F67]/70 rounded-lg p-3 text-center border border-[#34699A]/20">
+                        <div key={idx} className="bg-[#0a1628]/70 rounded-lg p-3 text-center border border-[#34699A]/20">
                           <p className="text-[#58A0C8] font-semibold text-sm">{tech}</p>
                         </div>
                       ))}
@@ -331,7 +331,7 @@ const DeveloperPortfolio = () => {
 
 
       {/* About Section */}
-      <section id="about" className="relative py-20 px-4 sm:px-6 lg:px-8 bg-[#113F67]/60">
+      <section id="about" className="relative py-20 px-4 sm:px-6 lg:px-8 bg-[#060d1a]/60">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
@@ -367,7 +367,7 @@ const DeveloperPortfolio = () => {
                 { number: "500+", label: "GitHub Commits" },
                 { number: "100%", label: "Client Satisfaction" }
               ].map((stat, idx) => (
-                <div key={idx} className="bg-gradient-to-br from-[#113F67] to-[#1a3550] rounded-2xl p-6 border border-[#34699A]/30 hover:border-[#58A0C8]/50 transition-all">
+                <div key={idx} className="bg-gradient-to-br from-[#0a1628] to-[#0e2240] rounded-2xl p-6 border border-[#34699A]/30 hover:border-[#58A0C8]/50 transition-all">
                   <h3 className="text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#58A0C8] to-[#FDF5AA] mb-2">
                     {stat.number}
                   </h3>
@@ -397,12 +397,12 @@ const DeveloperPortfolio = () => {
               </h3>
               <div className="grid md:grid-cols-2 gap-6">
                 {techStack.frontend.map((skill, idx) => (
-                  <div key={idx} className="bg-[#113F67]/70 backdrop-blur-sm rounded-xl p-6 border border-[#34699A]/30 hover:border-[#58A0C8]/50 transition-all">
+                  <div key={idx} className="bg-[#0a1628]/70 backdrop-blur-sm rounded-xl p-6 border border-[#34699A]/30 hover:border-[#58A0C8]/50 transition-all">
                     <div className="flex justify-between items-center mb-3">
                       <span className="text-white font-semibold text-lg">{skill.name}</span>
                       <span className="text-[#58A0C8] font-bold">{skill.level}%</span>
                     </div>
-                    <div className="w-full bg-[#113F67] rounded-full h-3 overflow-hidden">
+                    <div className="w-full bg-[#060d1a] rounded-full h-3 overflow-hidden">
                       <div
                         className={`h-full bg-gradient-to-r ${skill.color} rounded-full transition-all duration-1000 shadow-lg`}
                         style={{ width: `${skill.level}%` }}
@@ -420,12 +420,12 @@ const DeveloperPortfolio = () => {
               </h3>
               <div className="grid md:grid-cols-2 gap-6">
                 {techStack.backend.map((skill, idx) => (
-                  <div key={idx} className="bg-[#113F67]/70 backdrop-blur-sm rounded-xl p-6 border border-[#34699A]/30 hover:border-[#34699A]/60 transition-all">
+                  <div key={idx} className="bg-[#0a1628]/70 backdrop-blur-sm rounded-xl p-6 border border-[#34699A]/30 hover:border-[#34699A]/60 transition-all">
                     <div className="flex justify-between items-center mb-3">
                       <span className="text-white font-semibold text-lg">{skill.name}</span>
                       <span className="text-[#34699A] font-bold">{skill.level}%</span>
                     </div>
-                    <div className="w-full bg-[#113F67] rounded-full h-3 overflow-hidden">
+                    <div className="w-full bg-[#060d1a] rounded-full h-3 overflow-hidden">
                       <div
                         className={`h-full bg-gradient-to-r ${skill.color} rounded-full transition-all duration-1000 shadow-lg`}
                         style={{ width: `${skill.level}%` }}
@@ -443,12 +443,12 @@ const DeveloperPortfolio = () => {
               </h3>
               <div className="grid md:grid-cols-2 gap-6">
                 {techStack.tools.map((skill, idx) => (
-                  <div key={idx} className="bg-[#113F67]/70 backdrop-blur-sm rounded-xl p-6 border border-[#FDF5AA]/15 hover:border-[#FDF5AA]/40 transition-all">
+                  <div key={idx} className="bg-[#0a1628]/70 backdrop-blur-sm rounded-xl p-6 border border-[#FDF5AA]/15 hover:border-[#FDF5AA]/40 transition-all">
                     <div className="flex justify-between items-center mb-3">
                       <span className="text-white font-semibold text-lg">{skill.name}</span>
                       <span className="text-[#FDF5AA] font-bold">{skill.level}%</span>
                     </div>
-                    <div className="w-full bg-[#113F67] rounded-full h-3 overflow-hidden">
+                    <div className="w-full bg-[#060d1a] rounded-full h-3 overflow-hidden">
                       <div
                         className={`h-full bg-gradient-to-r ${skill.color} rounded-full transition-all duration-1000 shadow-lg`}
                         style={{ width: `${skill.level}%` }}
@@ -463,7 +463,7 @@ const DeveloperPortfolio = () => {
       </section>
 
       {/* Projects Section */}
-      <section id="projects" className="relative py-20 px-4 sm:px-6 lg:px-8 bg-[#113F67]/60">
+      <section id="projects" className="relative py-20 px-4 sm:px-6 lg:px-8 bg-[#060d1a]/60">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
@@ -477,7 +477,7 @@ const DeveloperPortfolio = () => {
 
           <div className="grid md:grid-cols-2 gap-8">
             {projects.map((project, idx) => (
-              <div key={idx} className="bg-[#113F67]/70 backdrop-blur-sm rounded-2xl overflow-hidden border border-[#34699A]/30 hover:border-[#58A0C8]/50 transition-all hover:scale-105 group">
+              <div key={idx} className="bg-[#0a1628]/70 backdrop-blur-sm rounded-2xl overflow-hidden border border-[#34699A]/30 hover:border-[#58A0C8]/50 transition-all hover:scale-105 group">
                 <div className={`h-48 bg-gradient-to-br ${gradients[project.image]} flex items-center justify-center relative overflow-hidden`}>
                   <Code size={80} className="text-white/20 group-hover:scale-110 transition-transform" />
                   <div className="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-all"></div>
@@ -523,7 +523,7 @@ const DeveloperPortfolio = () => {
               href="https://github.com/MrManoj124"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 bg-gradient-to-r from-[#58A0C8] to-[#FDF5AA] text-[#113F67] px-8 py-3 rounded-lg font-semibold hover:shadow-lg hover:shadow-[#58A0C8]/50 transition-all hover:scale-105"
+              className="inline-flex items-center gap-2 bg-gradient-to-r from-[#58A0C8] to-[#FDF5AA] text-[#0a1628] px-8 py-3 rounded-lg font-semibold hover:shadow-lg hover:shadow-[#58A0C8]/50 transition-all hover:scale-105"
             >
               <Github size={20} /> View All Projects on GitHub
             </a>
@@ -543,7 +543,7 @@ const DeveloperPortfolio = () => {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {services.map((service, idx) => (
-              <div key={idx} className="bg-[#113F67]/70 backdrop-blur-sm rounded-2xl p-8 border border-[#34699A]/30 hover:border-[#58A0C8]/50 transition-all hover:scale-105 group">
+              <div key={idx} className="bg-[#0a1628]/70 backdrop-blur-sm rounded-2xl p-8 border border-[#34699A]/30 hover:border-[#58A0C8]/50 transition-all hover:scale-105 group">
                 <div className={`w-16 h-16 bg-gradient-to-r ${service.color} rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform shadow-lg`}>
                   <service.icon className="text-white" size={32} />
                 </div>
@@ -560,7 +560,7 @@ const DeveloperPortfolio = () => {
       </section>
 
       {/* Contact Section */}
-      <section id="contact" className="relative py-20 px-4 sm:px-6 lg:px-8 bg-[#113F67]/60">
+      <section id="contact" className="relative py-20 px-4 sm:px-6 lg:px-8 bg-[#060d1a]/60">
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
@@ -572,7 +572,7 @@ const DeveloperPortfolio = () => {
             </p>
           </div>
 
-          <div className="bg-[#113F67]/70 backdrop-blur-sm rounded-2xl p-8 border border-[#34699A]/30">
+          <div className="bg-[#0a1628]/70 backdrop-blur-sm rounded-2xl p-8 border border-[#34699A]/30">
             <div className="space-y-6">
               <div className="grid md:grid-cols-2 gap-6">
                 <div>
@@ -581,7 +581,7 @@ const DeveloperPortfolio = () => {
                     type="text"
                     value={formData.name}
                     onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                    className="w-full px-4 py-3 rounded-lg bg-[#0d3050]/60 border border-[#34699A]/40 text-white focus:border-[#58A0C8] focus:outline-none transition-all placeholder-gray-500"
+                    className="w-full px-4 py-3 rounded-lg bg-[#060d1a]/80 border border-[#34699A]/40 text-white focus:border-[#58A0C8] focus:outline-none transition-all placeholder-gray-500"
                     placeholder="Abina"
                   />
                 </div>
@@ -591,7 +591,7 @@ const DeveloperPortfolio = () => {
                     type="email"
                     value={formData.email}
                     onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                    className="w-full px-4 py-3 rounded-lg bg-[#0d3050]/60 border border-[#34699A]/40 text-white focus:border-[#58A0C8] focus:outline-none transition-all placeholder-gray-500"
+                    className="w-full px-4 py-3 rounded-lg bg-[#060d1a]/80 border border-[#34699A]/40 text-white focus:border-[#58A0C8] focus:outline-none transition-all placeholder-gray-500"
                     placeholder="mathew@gmail.com"
                   />
                 </div>
@@ -612,18 +612,18 @@ const DeveloperPortfolio = () => {
                   value={formData.message}
                   onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                   rows="6"
-                  className="w-full px-4 py-3 rounded-lg bg-[#0d3050]/60 border border-[#34699A]/40 text-white focus:border-[#58A0C8] focus:outline-none transition-all resize-none placeholder-gray-500"
+                  className="w-full px-4 py-3 rounded-lg bg-[#060d1a]/80 border border-[#34699A]/40 text-white focus:border-[#58A0C8] focus:outline-none transition-all resize-none placeholder-gray-500"
                   placeholder="Tell me about your project..."
                 ></textarea>
               </div>
               <button
                 onClick={handleSubmit}
                 disabled={isSubmitting}
-                className="w-full bg-gradient-to-r from-[#58A0C8] to-[#FDF5AA] text-[#113F67] py-4 rounded-lg font-semibold hover:shadow-lg hover:shadow-[#58A0C8]/50 transition-all hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
+                className="w-full bg-gradient-to-r from-[#58A0C8] to-[#FDF5AA] text-[#0a1628] py-4 rounded-lg font-semibold hover:shadow-lg hover:shadow-[#58A0C8]/50 transition-all hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
               >
                 {isSubmitting ? (
                   <>
-                    <div className="w-5 h-5 border-2 border-[#113F67] border-t-transparent rounded-full animate-spin"></div>
+                    <div className="w-5 h-5 border-2 border-[#0a1628] border-t-transparent rounded-full animate-spin"></div>
                     Sending...
                   </>
                 ) : (
@@ -658,7 +658,7 @@ const DeveloperPortfolio = () => {
       </section>
 
       {/* Footer */}
-      <footer className="relative py-8 px-4 bg-[#0d2d45] border-t border-[#34699A]/30">
+      <footer className="relative py-8 px-4 bg-[#050b15] border-t border-[#34699A]/30">
         <div className="max-w-7xl mx-auto">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-gray-400">
