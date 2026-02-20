@@ -499,14 +499,30 @@ const DeveloperPortfolio = () => {
                   <div className="flex items-center justify-between pt-4">
                     <div className="flex gap-4">
                       <a
-                        href={project.github}
-                        className="flex items-center gap-2 text-gray-400 hover:text-white transition-colors"
+                        href={project.github !== "#" ? project.github : undefined}
+                        target={project.github !== "#" ? "_blank" : undefined}
+                        rel={project.github !== "#" ? "noopener noreferrer" : undefined}
+                        onClick={(e) => {
+                          if (project.github === "#") {
+                            e.preventDefault();
+                            alert("Source code link coming soon!");
+                          }
+                        }}
+                        className={`flex items-center gap-2 transition-colors ${project.github !== "#" ? "text-gray-400 hover:text-white cursor-pointer" : "text-gray-500 cursor-not-allowed"}`}
                       >
                         <Github size={20} /> Code
                       </a>
                       <a
-                        href={project.live}
-                        className="flex items-center gap-2 text-gray-400 hover:text-[#FDF5AA] transition-colors"
+                        href={project.live !== "#" ? project.live : undefined}
+                        target={project.live !== "#" ? "_blank" : undefined}
+                        rel={project.live !== "#" ? "noopener noreferrer" : undefined}
+                        onClick={(e) => {
+                          if (project.live === "#") {
+                            e.preventDefault();
+                            alert("Live demo coming soon!");
+                          }
+                        }}
+                        className={`flex items-center gap-2 transition-colors ${project.live !== "#" ? "text-gray-400 hover:text-[#FDF5AA] cursor-pointer" : "text-gray-500 cursor-not-allowed"}`}
                       >
                         <ExternalLink size={20} /> Live Demo
                       </a>
